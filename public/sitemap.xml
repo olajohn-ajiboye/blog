@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://ola-john.com/categories/</loc>
+    <loc>http://olajohn.me/post/hello-world/</loc>
+    <lastmod>2019-06-02T13:56:47+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/javascript/</loc>
+    <lastmod>2019-06-02T13:56:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ola-john.com/</loc>
+    <loc>http://olajohn.me/</loc>
+    <lastmod>2019-06-02T13:56:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ola-john.com/tags/</loc>
+    <loc>http://olajohn.me/post/</loc>
+    <lastmod>2019-06-02T13:56:47+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/</loc>
+    <lastmod>2019-06-02T13:56:47+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/vue/</loc>
+    <lastmod>2019-06-02T13:56:47+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/categories/</loc>
     <priority>0</priority>
   </url>
   

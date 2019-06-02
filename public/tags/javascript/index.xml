@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ola John</title>
-    <link>http://olajohn.me/</link>
-    <description>Recent content on Ola John</description>
+    <title>Javascript on Ola John</title>
+    <link>http://olajohn.me/tags/javascript/</link>
+    <description>Recent content in Javascript on Ola John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Jun 2019 13:56:47 +0300</lastBuildDate>
     
-	<atom:link href="http://olajohn.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://olajohn.me/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

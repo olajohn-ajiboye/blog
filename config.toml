@@ -1,4 +1,4 @@
-baseURL = "http://ola-john.com/"
+baseURL = "http://olajohn.me/"
 languageCode = "en-us"
 title = "Ola John"
 theme = "hugo-lamp"
@@ -15,7 +15,7 @@ theme = "hugo-lamp"
   adsenseSlotSticky = "XXX"             # Enables sticky ads feature, value maybe the same with adsenseSlot, remove if you don't want display sticky ads
 
   # SEO configs
-  seotitle = "Web development"
+  seotitle = "Ola John's Dev Blog"
   googleSiteVerification = "google_site_verification_code"    # Google Webmaster
   msValidate = "bing_site_verification_code"                  # Bing Webmaster
 
@@ -29,18 +29,18 @@ theme = "hugo-lamp"
   tag = "tags"
   category = "categories"
 
-[[menu.main]]
-  name = "About"
-  weight = 1
-  identifier = "hugo"
-  url = "/hugo/"
-[[menu.main]]
-  name = "Projects"
-  weight = 2
-  identifier = "amp"
-  url = "/amp/"
-[[menu.main]]
-  name = "Tags"
-  weight = 3
-  identifier = "tags"
-  url = "/tags/"
+# [[menu.main]]
+#   name = "About"
+#   weight = 1
+#   identifier = "hugo"
+#   url = "/hugo/"
+# [[menu.main]]
+#   name = "Projects"
+#   weight = 2
+#   identifier = "amp"
+#   url = "/amp/"
+# [[menu.main]]
+#   name = "Tags"
+#   weight = 3
+#   identifier = "tags"
+  # url = "/tags/"

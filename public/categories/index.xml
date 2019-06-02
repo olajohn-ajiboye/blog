@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Ola John</title>
-    <link>http://ola-john.com/categories/</link>
+    <link>http://olajohn.me/categories/</link>
     <description>Recent content in Categories on Ola John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://ola-john.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://olajohn.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
