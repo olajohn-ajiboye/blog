@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VueX on Ola John</title>
+    <link>http://olajohn.me/tags/vuex/</link>
+    <description>Recent content in VueX on Ola John</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Jun 2019 23:33:57 +0300</lastBuildDate>
+    
+	<atom:link href="http://olajohn.me/tags/vuex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vue Realtime(2)</title>
+      <link>http://olajohn.me/post/vue-realtime2/</link>
+      <pubDate>Sun, 02 Jun 2019 23:33:57 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/vue-realtime2/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,18 +6,76 @@
     <description>Recent content on Ola John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2019 13:56:47 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2019 23:33:57 +0300</lastBuildDate>
     
 	<atom:link href="http://olajohn.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello World</title>
-      <link>http://olajohn.me/post/hello-world/</link>
+      <title>Vue Realtime(2)</title>
+      <link>http://olajohn.me/post/vue-realtime2/</link>
+      <pubDate>Sun, 02 Jun 2019 23:33:57 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/vue-realtime2/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Most of the Es6 You Need have a Smoother Start With React</title>
+      <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
+      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Build Apis With Node Express Mongodb</title>
+      <link>http://olajohn.me/post/build-apis-with-node-express-mongodb/</link>
+      <pubDate>Sun, 02 Jun 2019 23:25:40 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/build-apis-with-node-express-mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Oriented Javascript Part(1)</title>
+      <link>http://olajohn.me/post/object-oriented-javascriptpart-1/</link>
+      <pubDate>Sun, 02 Jun 2019 23:24:17 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/object-oriented-javascriptpart-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Oriented Javascript Part(2)</title>
+      <link>http://olajohn.me/post/object-oriented-javascript2/</link>
+      <pubDate>Sun, 02 Jun 2019 23:24:17 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/object-oriented-javascript2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Building a Real-Time Data-Table with Vue.js/VueX and Google Firebase(Part 1)</title>
+      <link>http://olajohn.me/post/vue-realtime-firabse-app/</link>
       <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
       
-      <guid>http://olajohn.me/post/hello-world/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <guid>http://olajohn.me/post/vue-realtime-firabse-app/</guid>
+      <description>Hellooo!,
+In this tutorial we&amp;rsquo;ll be building a tiny web application using Vue.js with Vuex and Firebase.The data table we&amp;rsquo;ll be building will update the UI and the firestore database in real-time based on user interaction.I have decided to go with an example not more complex than a todo-list, but a little more interesting thana todo list.
+What we&amp;rsquo;ll be building is a simple data-table that tracks user interaction. Some of the assumptions I will make are that you have Node and NPM installed and a basic knowledge of Javascript.</description>
+    </item>
+    
+    <item>
+      <title>Javascript Array Methods</title>
+      <link>http://olajohn.me/post/array-methods/</link>
+      <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/array-methods/</guid>
+      <description>Hellooo!,
+In this tutorial we&amp;rsquo;ll be building a tiny web application using Vue.js with Vuex and Firebase.The data table we&amp;rsquo;ll be building will update the UI and the firestore database in real-time based on user interaction.I have decided to go with an example not more complex than a todo-list, but a little more interesting thana todo list.
+What we&amp;rsquo;ll be building is a simple data-table that tracks user interaction. Some of the assumptions I will make are that you have Node and NPM installed and a basic knowledge of Javascript.</description>
     </item>
     
   </channel>

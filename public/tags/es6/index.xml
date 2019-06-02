@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ES6 on Ola John</title>
+    <link>http://olajohn.me/tags/es6/</link>
+    <description>Recent content in ES6 on Ola John</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Jun 2019 23:27:34 +0300</lastBuildDate>
+    
+	<atom:link href="http://olajohn.me/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Most of the Es6 You Need have a Smoother Start With React</title>
+      <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
+      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

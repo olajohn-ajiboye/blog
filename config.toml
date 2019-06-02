@@ -2,6 +2,7 @@ baseURL = "http://olajohn.me/"
 languageCode = "en-us"
 title = "Ola John"
 theme = "hugo-lamp"
+googleAnalytics = "UA-141257831-1"
 [params]
   subtitle = "Javascript | Node | React | Vue"
   author = "Ola John Ajiboye"
@@ -20,10 +21,11 @@ theme = "hugo-lamp"
   msValidate = "bing_site_verification_code"                  # Bing Webmaster
 
   # Social networks
-  email = "ajiboye/o.john@gmail.com"
+  email = "ajiboye.o.john@gmail.com"
   github = "olajohn-ajiboye"
   twitter = "jolajiboye"
   youtube = "youtube_username"
+  facebook = ""
 
 [taxonomies]
   tag = "tags"
@@ -41,6 +43,6 @@ theme = "hugo-lamp"
 #   url = "/amp/"
 # [[menu.main]]
 #   name = "Tags"
-#   weight = 3
+#   weight = 1
 #   identifier = "tags"
-  # url = "/tags/"
+#   url = "/tags/"
