@@ -1,0 +1,46 @@
+baseURL = "http://ola-john.com/"
+languageCode = "en-us"
+title = "Ola John"
+theme = "hugo-lamp"
+[params]
+  subtitle = "Javascript | Node | React | Vue"
+  author = "Ola John Ajiboye"
+  logo = "/img/profile.jpg"
+  description = "Writing Javascript stuffs"
+  paginate = 10
+
+  # Publisher
+  ## adsensePublisher = "ca-pub-XXX"    # Required if you want to include Google Adsense
+  adsenseSlot = "XXX"                   # Required slot to display ads
+  adsenseSlotSticky = "XXX"             # Enables sticky ads feature, value maybe the same with adsenseSlot, remove if you don't want display sticky ads
+
+  # SEO configs
+  seotitle = "Web development"
+  googleSiteVerification = "google_site_verification_code"    # Google Webmaster
+  msValidate = "bing_site_verification_code"                  # Bing Webmaster
+
+  # Social networks
+  email = "ajiboye/o.john@gmail.com"
+  github = "olajohn-ajiboye"
+  twitter = "jolajiboye"
+  youtube = "youtube_username"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  name = "About"
+  weight = 1
+  identifier = "hugo"
+  url = "/hugo/"
+[[menu.main]]
+  name = "Projects"
+  weight = 2
+  identifier = "amp"
+  url = "/amp/"
+[[menu.main]]
+  name = "Tags"
+  weight = 3
+  identifier = "tags"
+  url = "/tags/"
