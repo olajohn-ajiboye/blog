@@ -3,8 +3,8 @@ title: "Building a Real-Time Data-Table with Vue.js/VueX and Google Firebase(Par
 author: "Ola John"
 tags: ["Vue", "Javascript","Real-time","Firebase","Web"]
 cover: "/img/vue-fb.jpg"
-date: 2019-06-02T13:56:47+03:00
-draft: false
+date: 2019-06-02T13:56:47+03:03
+draft: true
 ---
 Hellooo!,
 
