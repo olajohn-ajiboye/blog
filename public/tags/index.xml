@@ -1,105 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Ola John</title>
+    <title>Tags on Ola John </title>
     <link>http://olajohn.me/tags/</link>
-    <description>Recent content in Tags on Ola John</description>
+    <description>Recent content in Tags on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2019 23:33:57 +0300</lastBuildDate>
     
 	<atom:link href="http://olajohn.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Firebase</title>
-      <link>http://olajohn.me/tags/firebase/</link>
-      <pubDate>Sun, 02 Jun 2019 23:33:57 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/firebase/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vue</title>
-      <link>http://olajohn.me/tags/vue/</link>
-      <pubDate>Sun, 02 Jun 2019 23:33:57 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VueX</title>
-      <link>http://olajohn.me/tags/vuex/</link>
-      <pubDate>Sun, 02 Jun 2019 23:33:57 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/vuex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Coding</title>
-      <link>http://olajohn.me/tags/coding/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ES6</title>
-      <link>http://olajohn.me/tags/es6/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/es6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>http://olajohn.me/tags/javascript/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>http://olajohn.me/tags/react/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Array</title>
-      <link>http://olajohn.me/tags/array/</link>
-      <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/array/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Real-time</title>
-      <link>http://olajohn.me/tags/real-time/</link>
-      <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/real-time/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>http://olajohn.me/tags/web/</link>
-      <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/web/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

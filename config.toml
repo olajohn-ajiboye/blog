@@ -1,12 +1,12 @@
 baseURL = "http://olajohn.me/"
 languageCode = "en-us"
-title = "Ola John"
+title = "Ola John "
 theme = "hugo-lamp"
 googleAnalytics = "UA-141257831-1"
 [params]
   subtitle = "Javascript | Node | React | Vue"
   author = "Ola John Ajiboye"
-  logo = "/img/profile.jpg"
+  logo = "/img/avatar.jpg"
   description = "Writing Javascript stuffs"
   paginate = 10
 
