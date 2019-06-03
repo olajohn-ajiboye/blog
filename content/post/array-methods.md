@@ -3,7 +3,7 @@ title: "Javascript Array Methods"
 author: "Ola John"
 tags: [ "Javascript","Array", "Coding"]
 date: 2019-06-02T13:56:47+03:00
-draft: false
+draft: true
 ---
 Hellooo!,
 

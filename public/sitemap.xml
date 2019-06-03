@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://olajohn.me/post/building-a-real-time-data-table-with-vue.js/vuex-and-google-firebasepart-2/</loc>
+    <lastmod>2019-06-02T23:33:57+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://olajohn.me/tags/firebase/</loc>
     <lastmod>2019-06-02T23:33:57+03:00</lastmod>
     <priority>0</priority>
@@ -30,11 +35,6 @@
     <loc>http://olajohn.me/tags/vue/</loc>
     <lastmod>2019-06-02T23:33:57+03:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/post/vue-realtime2/</loc>
-    <lastmod>2019-06-02T23:33:57+03:00</lastmod>
   </url>
   
   <url>
