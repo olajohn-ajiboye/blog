@@ -5,9 +5,10 @@ tags: ["React", "Javascript","ES6","Coding"]
 draft: false
 ---
 
-In an ideal world,you'd probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately,the world isn't ideal. However I believe getting the Fundamentals of the Javascript you'd be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let's try to look at those ES6 feature you are most certainly going to come across majority of the time.
+One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first.
+You are unsure which part of the code is some ***abracadabra*** or just plain ES6.At least this was my feeling when I started learning React(I am still learning).You get caught thinking what the hell is this `bind(this)` everywhere and why, what of these funny looking variable assignments...oh that was `destructuring`, etc.
 
-
+This is an attempt to layout some ES6 concepts I which I knew throughly before delving into React or any modern Javascrpt software for that matter.These fundamentals will make you a more productive modern Javascript developer quickly regardless of framework.
 
 We'll be taking a dive at the underlisted ES6 concepts.Some are more simpler that the other and you'll probably know them already if you have worked with Javascript for as little as few weeks. But I guess it's fine to go over them nonetheless.
 
@@ -15,7 +16,7 @@ We'll be taking a dive at the underlisted ES6 concepts.Some are more simpler tha
 
 * [Varibale declaration with let/const](#variable-declaration-with-let-const)
 * [Template literals (Template strings)](#template-literals-template-strings)
-* [Ternary Opearors ..that weird one with &&](#ternary-opearors)
+* [Ternary Opearors](#ternary-operators)
 * [ES6 Module system](#es6-module-system)
 * [Destructuring assignments](#destructuring-assignments)
 * [High-order Functions](#high-order-functions)
@@ -200,16 +201,17 @@ The word **"modules"** refers to a small units of independent reusable code. The
 
 The module you are exporting could be any reusable block of code. It could be a simple variable, a function , a react component, a third party module you modified etc. Let's create simple modules and understand how we can export them.
 
-Let's create 2 modules one variable and one function. Let's create a module in a file named ``ourModule.js``
+Let's create 2 modules one variable and one function. Let's create a module in a file named ``myModule.js``
+> ***ignore the implementation details if you are not sure how the code works. That is one major point of using third party modules.Just know what it does and how to use it.***
 
 {{< highlight jsm "linenostart=1" >}}
-// ourModule.js
+// myModule.js
 const myModuleConstant = "I am just a simple Variable"
 
 // this function takes an array and add all the numbers
 const addNumberInArray = (array) => array.reduce((a, b) => a + b);
 
-// this function takes an array finds the average
+// this function takes an array and finds the average
 const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 }
 {{< /highlight >}}
@@ -218,7 +220,7 @@ Now that we have created our module, let's make them accessible as modules to ot
 
 * Each modules can be exported individually:
 {{< highlight jsm "linenostart=1" >}}
-// ourModule.js
+// myModule.js
 export const myModuleConstant = "I am just a simple Variable"
 
 // this function takes an array and add all the numbers
@@ -230,10 +232,10 @@ export const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.
 {{< /highlight >}}
 
 But that looks cumbersome and repetitive. Is there a better way?, Sure!
-* Use a single export statement for all modules in ``ourModule.js``:
+* Use a single export statement for all modules in ``myModule.js``:
 
 {{< highlight jsm "linenostart=1" >}}
-// ourModule.js
+// myModule.js
  const myModuleConstant = "I am just a simple Variable"
 
 // this function takes an array and add all the numbers
@@ -248,12 +250,112 @@ export {myModuleConstant,addNumberInArray, findArrayAverage }
 
 * You can also use export default values
 
+
 >**Note:** *With export default ............*
 
-**Importing Modules**
+* **Exporting with alias**
+
+You can give the exported module an alias(like a nick name). For example the `addNumberInArray` and `findArrayAverage` could be be exported with an alias like so.
+
+{{< highlight jsm "linenostart=1" >}}
+export {myModuleConstant,addNumberInArray as add, findArrayAverage as avg }
+{{< /highlight >}}
 
 
-### Ternary Opearors ..that weird one with  &&
+
+* **Importing Modules**
+
+Now that we understand how to export modules, let's look at importing them and using them. Immporting is quite straightforward with the `import` keyword.
+Importing from `myModule.js` will look like so:
+
+{{< highlight jsm "linenostart=1" >}}
+//app.js
+
+import {myModuleConstant,addNumberInArray, findArrayAverage } from 'myModule.js' //
+
+// You can also import with an alias here if you didn't export with an alias
+import {myModuleConstant,addNumberInArray as add, findArrayAverage as avg } from 'myModule.js'
+
+{{< /highlight >}}
+
+> You can import everything that is exported from a module like this
+
+{{< highlight jsm "linenostart=1" >}}
+//app.js
+
+import * as All from 'myModule.js'
+
+// this allows us to have access to every memeber of the module with the dot notation.Like so:
+
+All.myModuleConstant
+All.addNumberInArray() // since this is a fucntion we have to call it.
+All.findArrayAverage()
+
+{{< /highlight >}}
+
+* **Importing a module with a default member**
+
+You import the default member by giving it a name of your choice. .............more
+
+
+* **Using imported module.**
+
+A quick look at how to actually use the module we have imported. Remember, the main puporse of a module is to have a re-usable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementatin details of the code itself. Let's start with the simple examples from `myModule`. Let's assume you have to calculate the average/sum of an array many times within your code.You could simply import ``myModule.js`` to do that wherever you need to perform the operation.Let's pretend these are even more complex algorthimic compuations and you do not or cannot write the fucntions yourself. You can simply import the module and use them in your code like so:
+
+{{< highlight jsm "linenostart=1" >}}
+//app.js
+import {addNumberInArray, findArrayAverage } from 'myModule.js'
+
+// I need to calculate sum of an array using the addNumberInArray function from 'myModule.js'.
+// Simply pass the array to the function like so:
+addNumberInArray([1,2,3,4,5]) //> returns the sum whhich is 15
+
+// I need to calculate average of an array using the findArrayAverage function from 'myModule.js'.
+// Simply pass the array to the function like so:
+findArrayAverage([1,2,3,4,5]) //> returns the sum which is 3.8
+{{< /highlight >}}
+
+Let's look at more interesting example from react-router-dom.
+
+We have imported `React` from ***react*** libarary. Then imported `BrowserRouter` , `Route`, `Link` from `react-router-dom`.
+
+> **Note:** ***`BrowserRouter` has been imported with an alias `Router`, this is much shorter to reference throughout the code than the longer `BrowserRouter`.***
+
+{{< highlight react "linenostart=1" >}}
+//app.js
+
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+function AppRouter() {
+  return (
+    <Router> // we have used the imported `Router` here
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link> // making use of the imported `Link`
+            </li>
+            <li>
+              <Link to="/about/">About</Link>
+            </li>
+            <li>
+              <Link to="/users/">Users</Link>
+            </li>
+          </ul>
+        </nav>
+        <Route path="/" exact component={Index} />  //making use of the imported `Link`
+        <Route path="/about/" component={About} />
+        <Route path="/users/" component={Users} />
+      </div>
+    </Router>
+  );
+}
+
+export default AppRouter;
+
+{{< /highlight >}}
+
+### Ternary Operators
 
 ### Destructuring assignments
 ### High-order Functions
