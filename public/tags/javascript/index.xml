@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on Ola John</title>
+    <title>Javascript on Ola John </title>
     <link>http://olajohn.me/tags/javascript/</link>
-    <description>Recent content in Javascript on Ola John</description>
+    <description>Recent content in Javascript on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Jun 2019 23:27:34 +0300</lastBuildDate>
@@ -12,34 +12,12 @@
     
     
     <item>
-      <title>Most of the Es6 You Need have a Smoother Start With React</title>
+      <title>The 80/20 rule - 20% of the ES6 you will use 80% of the time when learning React.</title>
       <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
       <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Building a Real-Time Data-Table with Vue.js/VueX and Google Firebase(Part 1)</title>
-      <link>http://olajohn.me/post/vue-realtime-firabse-app/</link>
-      <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
-      
-      <guid>http://olajohn.me/post/vue-realtime-firabse-app/</guid>
-      <description>Hellooo!,
-In this tutorial we&amp;rsquo;ll be building a tiny web application using Vue.js with Vuex and Firebase.The data table we&amp;rsquo;ll be building will update the UI and the firestore database in real-time based on user interaction.I have decided to go with an example not more complex than a todo-list, but a little more interesting thana todo list.
-What we&amp;rsquo;ll be building is a simple data-table that tracks user interaction. Some of the assumptions I will make are that you have Node and NPM installed and a basic knowledge of Javascript.</description>
-    </item>
-    
-    <item>
-      <title>Javascript Array Methods</title>
-      <link>http://olajohn.me/post/array-methods/</link>
-      <pubDate>Sun, 02 Jun 2019 13:56:47 +0300</pubDate>
-      
-      <guid>http://olajohn.me/post/array-methods/</guid>
-      <description>Hellooo!,
-In this tutorial we&amp;rsquo;ll be building a tiny web application using Vue.js with Vuex and Firebase.The data table we&amp;rsquo;ll be building will update the UI and the firestore database in real-time based on user interaction.I have decided to go with an example not more complex than a todo-list, but a little more interesting thana todo list.
-What we&amp;rsquo;ll be building is a simple data-table that tracks user interaction. Some of the assumptions I will make are that you have Node and NPM installed and a basic knowledge of Javascript.</description>
+      <description>In an ideal world,you&amp;rsquo;d probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn&amp;rsquo;t ideal. However I believe getting the Fundamentals of the Javascript you&amp;rsquo;d be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let&amp;rsquo;s try to look at those ES6 feature you are most certainly going to come across majority of the time.</description>
     </item>
     
   </channel>

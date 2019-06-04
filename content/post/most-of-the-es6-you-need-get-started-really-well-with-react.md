@@ -1,20 +1,22 @@
 ---
-title: "The 80/20 rule - Most of the ES6 You Need to know to have a better start with React."
+title: "The 80/20 rule - 20% of the ES6 you will use 80% of the time while learning React."
 date: 2019-06-02T23:27:34+03:00
 tags: ["React", "Javascript","ES6","Coding"]
 draft: false
 ---
 
-In an ideal world,you'd probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn't ideal. However I believe getting the Fundamentals of the Javascript you'd be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let's try to look at those ES6 feature you are most certainly going to come across majority of the time.
+In an ideal world,you'd probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately,the world isn't ideal. However I believe getting the Fundamentals of the Javascript you'd be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let's try to look at those ES6 feature you are most certainly going to come across majority of the time.
 
 
 
-We'll be taking a dive at the underlisted ES6 concepts.Some are more simpler that the other and you'll probably know them already if you have worked with Javascript for as little as few weeks. But I guess it's fine to go over them nonetheless. Let the part begin!
+We'll be taking a dive at the underlisted ES6 concepts.Some are more simpler that the other and you'll probably know them already if you have worked with Javascript for as little as few weeks. But I guess it's fine to go over them nonetheless.
+
+>  ***This is a pretty long post, you can skip ahead to any of the sections by clicking on them***.
 
 * [Varibale declaration with let/const](#variable-declaration-with-let-const)
 * [Template literals (Template strings)](#template-literals-template-strings)
 * [Ternary Opearors ..that weird one with &&](#ternary-opearors)
-* [ES6 Module system](#eS6-module-system)
+* [ES6 Module system](#es6-module-system)
 * [Destructuring assignments](#destructuring-assignments)
 * [High-order Functions](#high-order-functions)
 * [Arrow functions](#arrow-functions)
@@ -185,8 +187,74 @@ function es6String() {
   console.log(introdcution)
 }
 {{< /highlight >}}
-### Ternary Opearors ..that weird one with &&
+
 ### ES6 Module system
+
+ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that [here](https://www.sitepoint.com/understanding-es6-modules/), [here](https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/) and he. Instead I will provide a quick overview of what they are and how to quickly get started with them.
+
+What are ``ES6 Modules`` ?
+
+The word **"modules"** refers to a small units of independent reusable code. They are foundation of many design patterns and are neccesary to build any substantially complex application. Let's look at buiding a computer for example, it is consisted of several parts, but you could just assemble each part without worrying about the engineering behind each components or having to create your own components evrytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to re-invent the wheel all the time.There are various module standards but we'll be focusing on the **CommonJs Modules** whhich is the defacto in modern Front-End.
+
+**Creating and Exporting Modules**
+
+The module you are exporting could be any reusable block of code. It could be a simple variable, a function , a react component, a third party module you modified etc. Let's create simple modules and understand how we can export them.
+
+Let's create 2 modules one variable and one function. Let's create a module in a file named ``ourModule.js``
+
+{{< highlight jsm "linenostart=1" >}}
+// ourModule.js
+const myModuleConstant = "I am just a simple Variable"
+
+// this function takes an array and add all the numbers
+const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+
+// this function takes an array finds the average
+const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+}
+{{< /highlight >}}
+
+Now that we have created our module, let's make them accessible as modules to other parts of our code by **"exporting"** them.
+
+* Each modules can be exported individually:
+{{< highlight jsm "linenostart=1" >}}
+// ourModule.js
+export const myModuleConstant = "I am just a simple Variable"
+
+// this function takes an array and add all the numbers
+export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+
+// this function takes an array finds the average
+export const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+}
+{{< /highlight >}}
+
+But that looks cumbersome and repetitive. Is there a better way?, Sure!
+* Use a single export statement for all modules in ``ourModule.js``:
+
+{{< highlight jsm "linenostart=1" >}}
+// ourModule.js
+ const myModuleConstant = "I am just a simple Variable"
+
+// this function takes an array and add all the numbers
+ const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+
+// this function takes an array finds the average
+ const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+}
+
+export {myModuleConstant,addNumberInArray, findArrayAverage }
+{{< /highlight >}}
+
+* You can also use export default values
+
+>**Note:** *With export default ............*
+
+**Importing Modules**
+
+
+### Ternary Opearors ..that weird one with  &&
+
 ### Destructuring assignments
 ### High-order Functions
 ### Arrow functions

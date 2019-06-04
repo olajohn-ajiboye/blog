@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on Ola John</title>
+    <title>React on Ola John </title>
     <link>http://olajohn.me/tags/react/</link>
-    <description>Recent content in React on Ola John</description>
+    <description>Recent content in React on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Jun 2019 23:27:34 +0300</lastBuildDate>
@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Most of the Es6 You Need have a Smoother Start With React</title>
+      <title>The 80/20 rule - 20% of the ES6 you will use 80% of the time when learning React.</title>
       <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
       <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description></description>
+      <description>In an ideal world,you&amp;rsquo;d probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn&amp;rsquo;t ideal. However I believe getting the Fundamentals of the Javascript you&amp;rsquo;d be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let&amp;rsquo;s try to look at those ES6 feature you are most certainly going to come across majority of the time.</description>
     </item>
     
   </channel>
