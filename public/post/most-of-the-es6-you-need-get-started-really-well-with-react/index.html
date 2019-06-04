@@ -10,7 +10,7 @@
     
 
     
-    <title>The 80/20 rule - 20% of the ES6 you will use 80% of the time when learning React.</title>
+    <title>20% of the ES6 you will use 80% of the time while learning React.</title>
 
     
     
@@ -20,14 +20,14 @@
   
   
   <meta name="author" content="Ola John Ajiboye" />
-  <meta name="description" content="In an ideal world,you&amp;rsquo;d probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn&amp;rsquo;t ideal. However I believe getting the Fundamentals of the Javascript you&amp;rsquo;d be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let&amp;rsquo;s try to look at those ES6 feature you are most certainly going to come across majority of the time.">
+  <meta name="description" content="One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this bind(this) everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&amp;hellip;oh that was destructuring!">
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jolajiboye" />
-    <meta name="twitter:title" content="The 80/20 rule - 20% of the ES6 you will use 80% of the time when learning React." />
-    <meta name="twitter:description" content="In an ideal world,you&amp;rsquo;d probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn&amp;rsquo;t ideal. However I believe getting the Fundamentals of the Javascript you&amp;rsquo;d be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let&amp;rsquo;s try to look at those ES6 feature you are most certainly going to come across majority of the time." />
+    <meta name="twitter:title" content="20% of the ES6 you will use 80% of the time while learning React." />
+    <meta name="twitter:description" content="One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this bind(this) everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&amp;hellip;oh that was destructuring!" />
     <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
   
 
@@ -247,21 +247,28 @@
     
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">The 80/20 rule - 20% of the ES6 you will use 80% of the time when learning React.</h1>
-      <p class="entry-meta"><span class="entry-time">Jun 2, 2019</span> 8 min read</p>
+      <h1 class="post-title">20% of the ES6 you will use 80% of the time while learning React.</h1>
+      <p class="entry-meta"><span class="entry-time">Jun 2, 2019</span> 11 min read</p>
     </header>
     
 
     <article class="post-content">
 
-<p>In an ideal world,you&rsquo;d probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn&rsquo;t ideal. However I believe getting the Fundamentals of the Javascript you&rsquo;d be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let&rsquo;s try to look at those ES6 feature you are most certainly going to come across majority of the time.</p>
+<p>One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first.
+You are unsure which part of the code is some <strong><em>abracadabra</em></strong> or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this <code>bind(this)</code> everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&hellip;oh that was <code>destructuring</code>!.</p>
 
-<p>We&rsquo;ll be taking a dive at the underlisted ES6 concepts.Some are more simpler that the other and you&rsquo;ll probably know them already if you have worked with Javascript for as little as few weeks. But I guess it&rsquo;s fine to go over them nonetheless. Let the part begin!</p>
+<p>This is an attempt to layout some ES6 concepts I which I knew throughly before delving into React or any modern Javascrpt software for that matter.These fundamentals will make you a more productive modern Javascript developer quickly regardless of framework.</p>
+
+<p>We&rsquo;ll be taking a dive at the underlisted ES6 concepts.These I believe are essential to getting a quick grasp of React in particular much faster. Some are more simpler that the other and you&rsquo;ll probably know them already.But, I guess it&rsquo;s fine to go over them nonetheless.</p>
+
+<blockquote>
+<p><strong><em>This is a pretty long post, you can skip ahead to any of the sections by clicking on their links below</em></strong>.</p>
+</blockquote>
 
 <ul>
 <li><a href="#variable-declaration-with-let-const">Varibale declaration with let/const</a></li>
 <li><a href="#template-literals-template-strings">Template literals (Template strings)</a></li>
-<li><a href="#ternary-opearors">Ternary Opearors ..that weird one with &amp;&amp;</a></li>
+<li><a href="#ternary-operators">Ternary Opearors</a></li>
 <li><a href="#es6-module-system">ES6 Module system</a></li>
 <li><a href="#destructuring-assignments">Destructuring assignments</a></li>
 <li><a href="#high-order-functions">High-order Functions</a></li>
@@ -270,37 +277,48 @@
 <li><a href="#spread-rest-operator">Spread/Rest Operator</a></li>
 <li><a href="#default-function-parameters">Default function parameters</a></li>
 <li><a href="#es6-classes">ES6 Classes</a></li>
+<li><a href="#async-javascript">Async JavaScript</a></li>
 </ul>
 
 <h3 id="variable-declaration-with-let-const">Variable declaration with let/const</h3>
 
-<p>Before Es6 <code>var</code> was the defacto keyword for declaring variables. With ES6 two new keywords <code>let</code> and <code>const</code> were introduced for variable declartions. But what are the differences and why bother with them anyways?.
-There are couple of gotchas with decalring variables with the <code>var</code> keyword. The <code>scope</code> and <code>hositing</code> were cheif amongst the issue with <code>var</code>. But what does these 2 even mean.Let&rsquo;s take a look.</p>
+<p>Before ES6 <code>var</code> was the defacto keyword for declaring variables. With ES6 two new keywords <code>let</code> and <code>const</code> were introduced for variable declarations. But what are the differences and why bother with them anyways?.
+There are couple of gotchas with decalring variables with the <code>var</code> keyword. The <code>scope</code> and <code>hositing</code> were cheif amongst the issue with <code>var</code>. But what does these 2 even mean.</p>
 
-<p>The scope of <code>var</code> is the entire function block in which it is defined.It is also available globally when declared outside a function. <code>let</code> on the other hand is limited to the block scope. What does that even mean?, let&rsquo;s take a look at an example.</p>
+<p>The <strong><em>scope</em></strong> of <code>var</code> is the entire function block in which it is defined.It is also available globally when declared outside a function. <code>let</code> on the other hand is limited to the block scope. Let&rsquo;s look at this in code.</p>
 
-<p><strong>Global Object</strong></p>
+<ul>
+<li><strong>Global Object 😖</strong></li>
+</ul>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">testOfVar</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am &#39;Var&#39;&#34;</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">testOfLet</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am &#39;Let&#39;&#34;</span>
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testOfVar</span>) <span style="color:#75715e">// OutPuts I am &#39;var&#39;
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testOfLet</span>) <span style="color:#75715e">// OutPuts undefined
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testOfVar</span>) <span style="color:#75715e">// Outputs I am &#39;var&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testOfLet</span>) <span style="color:#75715e">// Outputs undefined
 </span></code></pre></div>
-As you would see the variable declared with <code>let</code> is not attached to the global object and therefore not accesible globally.On the other hand <code>var</code> decalred variable is accessible globally and therefore can be accidentally altered anywhere within the program.This is really bad and can be cause of debugging frustrations.It is therefore recommended to use <code>let</code> instead of <code>var</code> always.</p>
+As you would see the variable declared with <code>let</code> is not attached to the global object and therefore not accesible globally.On the otherhand <code>var</code> declared variable is accessible globally and therefore can be accidentally altered anywhere within the program.This is really bad and can be cause of debugging frustrations.Hence, it is recommended to use <code>let</code> instead of <code>var</code> almsot always.</p>
 
-<p><strong>Scope</strong></p>
+<ul>
+<li><strong>Scope 😏</strong></li>
+</ul>
 
-<p>The <code>let</code> statement declares a block scope local variable, optionally initializing it to a value.
-<strong>let</strong> allows the variable declaration to be limited in scope.It is limited to the scope block or statement, or expression on which it is used as well as any sub-blocks. Unlike <code>var</code> where the variable is hoisted to the top of the function scope and it is accessible through the entire function scope regardless.</p>
+<blockquote>
+<p>The <strong><code>let</code></strong> statement declares a block scope local variable, optionally initializing it to a value.</p>
+</blockquote>
 
-<p>Let&rsquo;s look at this in codes to solidify these concepts.
+<p>In simple english, variables declared with <code>let</code> has a limited scope within the <code>block</code> it is declared. You can intilaize the variable or not. But wait, what is a <code>block scope</code> ?,A <strong>block scope</strong> is the area within <code>if</code>, <code>switch</code> conditions or <code>for</code> and <code>while</code> loops. Generally speaking, whenever you see {curly brackets}, this is a block. Unlike <code>var</code> where the variable is hoisted to the top of the function scope regardless of the <strong>block</strong> scope.Hence,</p>
+
+<blockquote>
+<p><strong>var</strong> decalred variable is accessible throughout the entire function scope and can be modified.Why is this such a big deal you ask?, Some code snippets to the rescue below:</p>
+</blockquote>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfVar</span>() {
   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span> <span style="color:#75715e">// this will later be modified within the if block.
 </span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span>
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// this is same variable as the first &#39;myName&#39;
-</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// scope is ignored.Modifies the variable declared ontop of function.
+</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// scope is ignored.Modifies the variable and hoist it to top of function.
 </span><span style="color:#75715e"></span>                        <span style="color:#75715e">// Outputs &#39;Joshua&#39;
 </span><span style="color:#75715e"></span>  }
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// myName has been modified within the if block.
@@ -319,30 +337,34 @@ As you would see the variable declared with <code>let</code> is not attached to 
 </span><span style="color:#75715e">                      within the if block */</span>
                       <span style="color:#75715e">// Output &#39;John&#39;
 </span><span style="color:#75715e"></span>}
-</code></pre></div></p>
+</code></pre></div>
 
-<p><strong>Re-Declaration</strong></p>
+<ul>
+<li><strong>Re-Declaration 🙈</strong></li>
+</ul>
 
-<p>With <code>var</code> it was possible to re-declare a variable which isn&rsquo;t a good thing.You could easily re-declare a variable that has already been decalred to reference something else initially. It will introduce a bug without you noticing. <code>Let</code> throws an error when you try to re-declare a varibale within same scope.</p>
+<p>With <code>var</code> it was possible to re-declare a variable which isn&rsquo;t a good thing.You could easily re-declare a variable that has already been declared. It will introduce a bug without you noticing. <code>Let</code> throws an error when you try to re-declare a varibale within same scope. Example below:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfVar</span>() {
   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">// this doesn&#39;t make sense, but var makes it possible.
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">// this doesn&#39;t even make sense, but var makes it possible.
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>)  <span style="color:#75715e">// Outputs &#39;Joshua&#39;
 </span><span style="color:#75715e"></span>}
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfLet</span>() {
   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">// this doesn&#39;t make sense, but var makes it possible.
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">//
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// SyntaxError &#39;myName&#39; is already been declared
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
-<p>In summary avoid using the <code>var</code> statement. You should almost always pick the <code>let</code> keyword when you need to declare a variable.</p>
+<blockquote>
+<p><em>In summary avoid using the <code>var</code> statement for variable declaration. You should almost always pick the <code>let</code> keyword when you need to declare a variable</em>.</p>
+</blockquote>
 
-<p><strong>What about <code>const</code>?</strong></p>
+<p><strong>What about <code>const</code>? 😄</strong></p>
 
-<p><code>const</code> is quite similar to <code>let</code>. The major difference is that <code>const</code> can not be re-assigned.Do not confuse re-assigning with re-declaring. In most cases you&rsquo;d want to declare a variable and make some re-assignments depending on certain conditions. Let&rsquo;s look at an example.
+<p><code>const</code> is quite similar to <code>let</code>. The major difference is that <code>const</code> can not be re-assigned.Do not confuse re-assigning with re-declaring. In most cases you&rsquo;d want to declare a variable and make some re-assignments depending on certain conditions. Let&rsquo;s look at an example:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">constTest</span>() {
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
@@ -364,18 +386,23 @@ As you would see the variable declared with <code>let</code> is not attached to 
 
 <p>In the example above we have declared <code>ageDeclaration</code> with an empty string. Within the <code>if</code> block we are re-assigning it to keep track of the <code>age</code> variable. Note when we re-assigned the <code>ageDeclaration</code> within the <code>if</code> block, we did so without using the <code>let</code> statement. This is the basic difference between re-declaration and re-assigning.Almost always, what we intend to do is to re-assign a variable not re-declare it. However, with <code>const</code> you can neither re-declare or re-assign.Although, it is possible to change the properties of the variable decalred with <code>const</code>.</p>
 
+<blockquote>
+<p>Use <code>const</code> when you are sure there is no intention to re-assign the variable. However you can still use <code>const</code> for objects,arrays where some of the properties has to be re-assigned/modified. Refer to code example above</p>
+</blockquote>
+
 <h3 id="template-literals-template-strings">Template literals (Template strings)</h3>
 
-<p>Template strings simplifies the way we work with strings. String interpolation and multi-line strings are probably most of template strings you&rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.
+<p>Template strings simplifies the way we work with strings. String interpolation and multi-line strings are probably most of the template strings concepts you&rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//ES5
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">exampleString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am String&#34;</span> <span style="color:#75715e">// or  exampleString = &#39;I am a String&#39;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">exampleString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am an ES5 String&#34;</span> <span style="color:#75715e">// or  exampleString = &#39;I am a String&#39;
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">//ES6
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">exampleString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`I am String`</span>
-</code></pre></div>
-Template strings are easier explained with example code.</p>
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">exampleString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`I am an ES6 String`</span>
+</code></pre></div></p>
 
-<p><strong>Multi-line strings</strong></p>
+<ul>
+<li><strong>Multi-line strings</strong></li>
+</ul>
 
 <p>You can get strings in multiple lines by usinhg the string literals instead of the more cumbersome ES5 alternative.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//ES5
@@ -384,19 +411,13 @@ Template strings are easier explained with example code.</p>
 
 <span style="color:#75715e">//ES6
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`string text line
-</span><span style="color:#e6db74">string text line 2`</span>)
-</code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#a6e22e">A</span> <span style="color:#a6e22e">react</span> <span style="color:#a6e22e">JSX</span> <span style="color:#a6e22e">example</span>
-<span style="color:#75715e">//ES5
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;string text line 1\n&#39;</span> <span style="color:#f92672">+</span>
-<span style="color:#e6db74">&#39;string text line 2&#39;</span>);
-
-<span style="color:#75715e">//ES6
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`string text line
-</span><span style="color:#e6db74">string text line 2`</span>)
+</span><span style="color:#e6db74">string text line 2
+</span><span style="color:#e6db74">string text line 3`</span>)
 </code></pre></div></p>
 
-<p><strong>String Interpolation</strong></p>
+<ul>
+<li><strong>String Interpolation</strong></li>
+</ul>
 
 <p>Template literals provide an easy way to interpolate variables and expressions into strings.
 You do so by using the ${&hellip;} syntax:</p>
@@ -420,51 +441,74 @@ You do so by using the ${&hellip;} syntax:</p>
 }
 </code></pre></div>
 
+<p>Template strings are commonly used with styled-components library in React
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//Styled-Component exmaple
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fontSize</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calculateFontSize</span>();
+<span style="color:#a6e22e">RedCenteredText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">styled</span>.<span style="color:#a6e22e">h1</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">	color: red;
+</span><span style="color:#e6db74">	text-align: &#39;center;
+</span><span style="color:#e6db74">	font-size: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fontSize</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+</code></pre></div></p>
+
 <h3 id="es6-module-system">ES6 Module system</h3>
 
-<p>ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that <a href="https://www.sitepoint.com/understanding-es6-modules/">here</a>, <a href="https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/">here</a> and he. Instead I will provide a quick overview of what they are and how to quickly get started with them.</p>
+<p>ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that <a href="https://exploringjs.com/es6/ch_modules.html">here</a>, <a href="https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/">here</a> and <a href="https://www.sitepoint.com/understanding-es6-modules/">here</a>. Instead I will provide a quick overview of what they are and how to quickly get started with them.</p>
 
-<p>What are <code>ES6 Modules</code> ?</p>
+<ul>
+<li><strong>What are <code>ES6 Modules</code> ?</strong></li>
+</ul>
 
-<p>The word <strong>&ldquo;modules&rdquo;</strong> refers to a small units of independent reusable code. They are foundation of many design patterns and are neccesary to build any substantially complex application. Let&rsquo;s look at buiding a computer for example, it is consisted of several parts, but you could just assemble each part without worrying about the engineering behind each components or having to create your own components evrytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to re-invent the wheel all the time.There are various module standards but we&rsquo;ll be focusing on the <strong>CommonJs Modules</strong> whhich is the defacto in modern Front-End.</p>
+<blockquote>
+<p>The word <strong>&ldquo;modules&rdquo;</strong> refers to a small units of independent reusable code. They are foundation of many design patterns and are neccesary to build any substantially complex application.</p>
+</blockquote>
 
-<p><strong>Creating and Exporting Modules</strong></p>
+<p>Let&rsquo;s look at buiding a computer for example, it is consisted of several parts, but you could just assemble each part without worrying about the engineering complexities behind each components or having to create your own components everytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to re-invent the wheel all the time.</p>
+
+<ul>
+<li><strong>Creating and Exporting Modules</strong></li>
+</ul>
 
 <p>The module you are exporting could be any reusable block of code. It could be a simple variable, a function , a react component, a third party module you modified etc. Let&rsquo;s create simple modules and understand how we can export them.</p>
 
-<p>Let&rsquo;s create 2 modules one variable and one function. Let&rsquo;s create a module in a file named <code>ourModule.js</code></p>
+<p>Let&rsquo;s create 2 modules one variable and one function. Let&rsquo;s create a module in a file named <code>myModule.js</code></p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// ourModule.js
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myModuleConstant</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am just a simple Variable&#34;</span>
+<blockquote>
+<p><strong><em>ignore the implementation details if you are not sure how the code works. This is one major point of using third party modules. The implementation or how it works is less important. Just know what it does and how to use it.</em></strong></p>
+</blockquote>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// myModule.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myModuleConstant</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am just a simple const variable&#34;</span>
 
 <span style="color:#75715e">// this function takes an array and add all the numbers
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
 
-<span style="color:#75715e">// this function takes an array finds the average
+<span style="color:#75715e">// this function takes an array and finds the average
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
 }
 </code></pre></div>
 
-<p>Now that we have created our module, let&rsquo;s make them accessible as modules to other parts of our code by <strong>&ldquo;exporting&rdquo;</strong> them.</p>
+<p>Now that we have created our module, let&rsquo;s make them accessible as modules to other parts of our code by <strong>&ldquo;exporting&rdquo;</strong> them.There are several ways of doings is. We&rsquo;ll explore them below:</p>
 
 <ul>
-<li>Each modules can be exported individually:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// ourModule.js
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myModuleConstant</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am just a simple Variable&#34;</span>
-
-<span style="color:#75715e">// this function takes an array and add all the numbers
+<li><strong>Each modules can be exported individually.</strong>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// myModule.js
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// exports just this function individually
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
 
-<span style="color:#75715e">// this function takes an array finds the average
+<span style="color:#75715e">// exports just this function individually
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
 }
 </code></pre></div></li>
 </ul>
 
-<p>But that looks cumbersome and repetitive. Is there a better way?, Sure!
-* Use a single export statement for all modules in <code>ourModule.js</code>:</p>
+<p>But that looks cumbersome and repetitive. Is there a better way?, Sure!</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// ourModule.js
+<ul>
+<li><strong>Use a single export statement for all modules in <code>myModule.js</code>:</strong></li>
+</ul>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// myModule.js
 </span><span style="color:#75715e"></span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myModuleConstant</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am just a simple Variable&#34;</span>
 
 <span style="color:#75715e">// this function takes an array and add all the numbers
@@ -485,7 +529,107 @@ You do so by using the ${&hellip;} syntax:</p>
 <p><strong>Note:</strong> <em>With export default &hellip;&hellip;&hellip;&hellip;</em></p>
 </blockquote>
 
-<h3 id="ternary-opearors-that-weird-one-with">Ternary Opearors ..that weird one with  &amp;&amp;</h3>
+<ul>
+<li><strong>Exporting with an alias</strong></li>
+</ul>
+
+<p>You can give the exported module an alias(like a nick name). For example the <code>addNumberInArray</code> and <code>findArrayAverage</code> could be be exported with an alias like so:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">myModuleConstant</span>,<span style="color:#a6e22e">addNumberInArray</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">add</span>, <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">avg</span> }
+</code></pre></div>
+
+<ul>
+<li><strong>Importing Modules</strong></li>
+</ul>
+
+<p>Now that we understand how to export modules, let&rsquo;s look at importing them and using them. Importing is quite straightforward with the <code>import</code> keyword.
+Importing from <code>myModule.js</code> will look like so:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//app.js
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">myModuleConstant</span>,<span style="color:#a6e22e">addNumberInArray</span>, <span style="color:#a6e22e">findArrayAverage</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;myModule.js&#39;</span> <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// You can also import with an alias here if you didn&#39;t export with an alias
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">myModuleConstant</span>,<span style="color:#a6e22e">addNumberInArray</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">add</span>, <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">avg</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;myModule.js&#39;</span>
+</code></pre></div>
+
+<p>You can import everything that is exported from a module like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//app.js
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">All</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;myModule.js&#39;</span>
+
+<span style="color:#75715e">// this allows us to have access to every memeber of the module with the dot notation.Like so:
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">myModuleConstant</span>
+<span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">addNumberInArray</span>() <span style="color:#75715e">// since this is a fucntion we have to call it.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">findArrayAverage</span>()
+</code></pre></div>
+
+<ul>
+<li><strong>Importing a module with a default member</strong></li>
+</ul>
+
+<p>You import the default member by giving it a name of your choice. &hellip;&hellip;&hellip;&hellip;.more</p>
+
+<ul>
+<li><strong>Using imported module.</strong></li>
+</ul>
+
+<p>A quick look at how to actually use the module we have imported. Remember, the main puporse of a module is to have a re-usable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementatin details of the code itself. Let&rsquo;s start with the simple examples from <code>myModule</code>. Let&rsquo;s assume you have to calculate the average/sum of an array many times within your code.You could simply import <code>myModule.js</code> to do that wherever you need to perform the operation.Let&rsquo;s pretend these are even more complex algorthimic compuations and you do not or cannot write the fucntions yourself. You can simply import the module and use them in your code like so:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//app.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">addNumberInArray</span>, <span style="color:#a6e22e">findArrayAverage</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;myModule.js&#39;</span>
+
+<span style="color:#75715e">// I need to calculate sum of an array using the addNumberInArray function from &#39;myModule.js&#39;.
+</span><span style="color:#75715e">// Simply pass the array to the function like so:
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">addNumberInArray</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]) <span style="color:#75715e">//&gt; returns the sum whhich is 15
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// I need to calculate average of an array using the findArrayAverage function from &#39;myModule.js&#39;.
+</span><span style="color:#75715e">// Simply pass the array to the function like so:
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">findArrayAverage</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]) <span style="color:#75715e">//&gt; returns the sum which is 3.8
+</span></code></pre></div>
+
+<p>Let&rsquo;s look at more interesting example from react-router-dom.</p>
+
+<p>We have imported <code>React</code> from <strong><em>react</em></strong> libarary. Then imported <code>BrowserRouter</code> , <code>Route</code>, and <code>Link</code> from <code>react-router-dom</code>.</p>
+
+<blockquote>
+<p><strong>Note:</strong> <strong><em><code>BrowserRouter</code> has been imported with an alias <code>Router</code>, this is much shorter to reference throughout the code than the longer <code>BrowserRouter</code>.</em></strong></p>
+</blockquote>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-react" data-lang="react"><span style="color:#75715e">//app.js
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;  <span style="color:#75715e">// we import React from the react library
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">BrowserRouter</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">Router</span>, <span style="color:#a6e22e">Route</span>, <span style="color:#a6e22e">Link</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span> <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">modules</span> <span style="color:#a6e22e">we</span> <span style="color:#a6e22e">need</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">the</span> <span style="color:#e6db74">`react-router-dom`</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">AppRouter</span>() {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">Router</span>&gt; <span style="color:#75715e">// we then use the imported `Router` here
+</span><span style="color:#75715e"></span>      &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">nav</span>&gt;
+          &lt;<span style="color:#f92672">ul</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;
+              &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>&gt;<span style="color:#a6e22e">Home</span>&lt;/<span style="color:#f92672">Link</span>&gt; <span style="color:#75715e">// making use of the imported `Link`
+</span><span style="color:#75715e"></span>            &lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;
+              &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about/&#34;</span>&gt;<span style="color:#a6e22e">About</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+            &lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;
+              &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users/&#34;</span>&gt;<span style="color:#a6e22e">Users</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+            &lt;/<span style="color:#f92672">li</span>&gt;
+          &lt;/<span style="color:#f92672">ul</span>&gt;
+        &lt;/<span style="color:#f92672">nav</span>&gt;
+        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">exact</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{Index}</span> /&gt;  <span style="color:#75715e">//making use of the imported `Link`
+</span><span style="color:#75715e"></span>        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{About}</span> /&gt;
+        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{Users}</span> /&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">Router</span>&gt;
+  );
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">AppRouter</span>;</code></pre></div>
+
+<h3 id="ternary-operators">Ternary Operators</h3>
 
 <h3 id="destructuring-assignments">Destructuring assignments</h3>
 
@@ -519,10 +663,10 @@ You do so by using the ${&hellip;} syntax:</p>
         <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Facebook">
           <svg class="icon icon-facebook" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
         </a>
-        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=The%2080%2f20%20rule%20-%2020%25%20of%20the%20ES6%20you%20will%20use%2080%25%20of%20the%20time%20when%20learning%20React.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Twitter">
+        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=20%25%20of%20the%20ES6%20you%20will%20use%2080%25%20of%20the%20time%20while%20learning%20React.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Twitter">
           <svg class="icon icon-twitter" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
         </a>
-        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=The%2080%2f20%20rule%20-%2020%25%20of%20the%20ES6%20you%20will%20use%2080%25%20of%20the%20time%20when%20learning%20React.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Google+">
+        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=20%25%20of%20the%20ES6%20you%20will%20use%2080%25%20of%20the%20time%20while%20learning%20React.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Google+">
           <svg class="icon icon-google" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
         </a>
       </div>

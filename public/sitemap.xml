@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</loc>
+    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://olajohn.me/tags/coding/</loc>
     <lastmod>2019-06-02T23:27:34+03:00</lastmod>
     <priority>0</priority>
@@ -42,11 +47,6 @@
     <loc>http://olajohn.me/tags/</loc>
     <lastmod>2019-06-02T23:27:34+03:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</loc>
-    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
   </url>
   
   <url>

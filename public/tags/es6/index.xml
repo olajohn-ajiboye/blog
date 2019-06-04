@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>The 80/20 rule - 20% of the ES6 you will use 80% of the time when learning React.</title>
+      <title>20% of the ES6 you will use 80% of the time while learning React.</title>
       <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
       <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description>In an ideal world,you&amp;rsquo;d probably be required to learn a ton of Javascript before you take a dive into React or any Javascript Framework for that matter.Unfortunately, the world isn&amp;rsquo;t ideal. However I believe getting the Fundamentals of the Javascript you&amp;rsquo;d be using 80% of the time in React will make your journey less excrutiating.At least, this is what I found out. Let&amp;rsquo;s try to look at those ES6 feature you are most certainly going to come across majority of the time.</description>
+      <description>One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this bind(this) everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&amp;hellip;oh that was destructuring!</description>
     </item>
     
   </channel>

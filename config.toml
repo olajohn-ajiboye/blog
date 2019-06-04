@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Ola John "
 theme = "hugo-lamp"
 googleAnalytics = "UA-141257831-1"
+enableEmoji = "true"
 [params]
   subtitle = "Javascript | Node | React | Vue"
   author = "Ola John Ajiboye"
