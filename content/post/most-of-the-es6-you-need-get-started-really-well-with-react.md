@@ -160,9 +160,7 @@ string text line 3`)
 
 * **String Interpolation**
 
-Template literals provide an easy way to interpolate variables and expressions into strings.
-You do so by using the ${...} syntax:
-
+>Template literals provide an easy way to interpolate expressions into strings. You do so by using the ${...} syntax:
 {{< highlight jsm "linenostart=1" >}}
 //ES5
 function es5String() {
@@ -183,7 +181,7 @@ function es6String() {
 }
 {{< /highlight >}}
 
-Template strings are commonly used with styled-components library in React
+> *Template strings are commonly used with styled-components library in React*
 {{< highlight jsm "linenostart=1" >}}
 //Styled-Component exmaple
 const fontSize = calculateFontSize();
@@ -205,15 +203,14 @@ Let's look at buiding a computer for example, it is consisted of several parts, 
 
 * **Creating and Exporting Modules**
 
-The module you are exporting could be any reusable block of code. It could be a simple variable, a function , a react component, a third party module you modified etc. Let's create simple modules and understand how we can export them.
+The module you are exporting could be any reusable block of code. It could be a simple variable, a function , a react component, a third party module you modified etc. Let's create simple modules and understand how we can export them.ES6 provides two ways to export a module from a file: named export and default export.
 
-Let's create 2 modules one variable and one function. Let's create a module in a file named ``myModule.js``
+Let's create some modules in a file named ``myModules.js``
 
-> ***ignore the implementation details if you are not sure how the code works. This is one major point of using third party modules. The implementation or how it works is less important. Just know what it does and how to use it.***
-
+> *ignore the implementation details if you are not sure how the code works. This is one major point of using third party modules. The implementation or how it works is less important. Just know what it does and how to use it.*
 {{< highlight jsm "linenostart=1" >}}
-// myModule.js
-const myModuleConstant = "I am just a simple const variable"
+// myModules.js
+const myModulesConstant = "I am just a simple const variable"
 
 // this function takes an array and add all the numbers
 const addNumberInArray = (array) => array.reduce((a, b) => a + b);
@@ -225,9 +222,11 @@ const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 
 Now that we have created our module, let's make them accessible as modules to other parts of our code by **"exporting"** them.There are several ways of doings is. We'll explore them below:
 
-* **Each modules can be exported individually.**
+* **Each modules can be exported individually(Named Export).**
+
+> *With named exports, one can have multiple named exports per file. Then import the specific modules surrounded in braces. The name of imported module has to be the same as the name of the exported module.*
 {{< highlight jsm "linenostart=1" >}}
-// myModule.js
+// myModules.js
 
 // exports just this function individually
 export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
@@ -239,11 +238,11 @@ export const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.
 
 But that looks cumbersome and repetitive. Is there a better way?, Sure!
 
-* **Use a single export statement for all modules in ``myModule.js``:**
+* **Use a single export statement for all modules in ``myModules.js``:**
 
 {{< highlight jsm "linenostart=1" >}}
-// myModule.js
- const myModuleConstant = "I am just a simple Variable"
+// myModules.js
+ const moduleConst = {title: "I am a module comment"}
 
 // this function takes an array and add all the numbers
  const addNumberInArray = (array) => array.reduce((a, b) => a + b);
@@ -252,49 +251,69 @@ But that looks cumbersome and repetitive. Is there a better way?, Sure!
  const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 }
 
-export {myModuleConstant,addNumberInArray, findArrayAverage }
+export {myModulesConstant,addNumberInArray, findArrayAverage }
 {{< /highlight >}}
 
-* You can also use export default values
+* **Export default (Default export)**
+
+> You can only have **one** deafult export per file. When the deafult export is imported when can specify any name for it
+{{< highlight jsm "linenostart=1" >}}
+// myModules.js
+
+// named export
+ export const moduleConst = {title: "I am a module comment"}
+
+// named export
+ export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+
+// this is the default export only 1 is allowed in this file
+ export default const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+}
+{{< /highlight >}}
 
 
->**Note:** *With export default ............*
 
 * **Exporting with an alias**
 
 You can give the exported module an alias(like a nick name). For example the `addNumberInArray` and `findArrayAverage` could be be exported with an alias like so:
 
 {{< highlight jsm "linenostart=1" >}}
-export {myModuleConstant,addNumberInArray as add, findArrayAverage as avg }
+export {myModulesConstant,addNumberInArray as add, findArrayAverage as avg }
 {{< /highlight >}}
+
+In summary from [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) :
+
+> Named exports are useful to export several values from within same file. While importing, one will simply refer to the exported value by same name.
+
+> Deafult export allows just a single default export per module.You can of course have several other named exports within same file. The default export is considered the **main** exported value. A default export can be a function, a class, an object or anything else. This value is to be considered as the “main” exported value since it will be the simplest to import.
+
 
 
 
 * **Importing Modules**
 
 Now that we understand how to export modules, let's look at importing them and using them. Importing is quite straightforward with the `import` keyword.
-Importing from `myModule.js` will look like so:
+Importing from `myModules.js` will look like so:
 
 {{< highlight jsm "linenostart=1" >}}
 //app.js
 
-import {myModuleConstant,addNumberInArray, findArrayAverage } from 'myModule.js' //
+import {myModulesConstant,addNumberInArray, findArrayAverage } from './myModules.js' //
 
 // You can also import with an alias here if you didn't export with an alias
-import {myModuleConstant,addNumberInArray as add, findArrayAverage as avg } from 'myModule.js'
+import {myModulesConstant,addNumberInArray as add, findArrayAverage as avg } from './myModules.js'
 
 {{< /highlight >}}
 
- You can import everything that is exported from a module like this:
-
+ > You can import everything that is exported from a module like this:
 {{< highlight jsm "linenostart=1" >}}
 //app.js
 
-import * as All from 'myModule.js'
+import * as All from './myModules.js'
 
 // this allows us to have access to every memeber of the module with the dot notation.Like so:
 
-All.myModuleConstant
+All.myModulesConstant
 All.addNumberInArray() // since this is a fucntion we have to call it.
 All.findArrayAverage()
 
@@ -302,29 +321,46 @@ All.findArrayAverage()
 
 * **Importing a module with a default member**
 
-You import the default member by giving it a name of your choice. .............more
+When you import a default export , you simply use the ``import`` keyword to import the module like we've been doing. The only major difference is that you could call the import whatever name you wish. For example:
+{{< highlight jsm "linenostart=1" >}}
+//  myModules.js
+
+ export const moduleConst = {title: "I am a module comment"}
+
+ export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+
+ export default const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+
+//  app.js
+
+// all the below 3 will be referencing the `findArrayAverage` module since it is the only default export in myModules.js
+import abrcadabra from  './myModules.js'
+import someMagic from './myModules.js'
+import findArrayAverage from './myModules.js'
+
+{{< /highlight >}}
 
 
 * **Using imported module.**
 
-A quick look at how to actually use the module we have imported. Remember, the main puporse of a module is to have a re-usable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementatin details of the code itself. Let's start with the simple examples from `myModule`. Let's assume you have to calculate the average/sum of an array many times within your code.You could simply import ``myModule.js`` to do that wherever you need to perform the operation.Let's pretend these are even more complex algorthimic compuations and you do not or cannot write the fucntions yourself. You can simply import the module and use them in your code like so:
+Remember, the main puporse of a module is to have a re-usable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementation details of the code itself. Let's start with the simple examples from `myModules`. Let's assume you have to calculate the average/sum of an array many times within your code.You could simply import ``myModules.js`` to perform the operation.Let's pretend these are even more complex algorthimic compuations and you do not want to or cannot write the functions yourself. You can simply import the module and use them in your code like so:
 
 {{< highlight jsm "linenostart=1" >}}
 //app.js
-import {addNumberInArray, findArrayAverage } from 'myModule.js'
+import {addNumberInArray, findArrayAverage } from './myModules.js'
 
-// I need to calculate sum of an array using the addNumberInArray function from 'myModule.js'.
+// I need to calculate sum of an array using the addNumberInArray function from './myModules.js'.
 // Simply pass the array to the function like so:
 addNumberInArray([1,2,3,4,5]) //> returns the sum whhich is 15
 
-// I need to calculate average of an array using the findArrayAverage function from 'myModule.js'.
+// I need to calculate average of an array using the findArrayAverage function from './myModules.js'.
 // Simply pass the array to the function like so:
 findArrayAverage([1,2,3,4,5]) //> returns the sum which is 3.8
 {{< /highlight >}}
 
 Let's look at more interesting example from react-router-dom.
 
-We have imported `React` from ***react*** libarary. Then imported `BrowserRouter` , `Route`, and `Link` from `react-router-dom`.
+We imported `React` from ***react*** libarary. Then imported `BrowserRouter` , `Route`, and `Link` from `react-router-dom`.
 
 > **Note:** ***`BrowserRouter` has been imported with an alias `Router`, this is much shorter to reference throughout the code than the longer `BrowserRouter`.***
 
@@ -357,7 +393,6 @@ function AppRouter() {
     </Router>
   );
 }
-
 export default AppRouter;
 
 {{< /highlight >}}
