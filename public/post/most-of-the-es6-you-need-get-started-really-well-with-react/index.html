@@ -248,7 +248,7 @@
   <section class="main post-detail">
     <header class="post-header">
       <h1 class="post-title">20% of the ES6 you will use 80% of the time while learning React.</h1>
-      <p class="entry-meta"><span class="entry-time">Jun 2, 2019</span> 13 min read</p>
+      <p class="entry-meta"><span class="entry-time">Jun 2, 2019</span> 15 min read</p>
     </header>
     
 
@@ -673,9 +673,74 @@ Importing from <code>myModules.js</code> will look like so:</p>
 
 <h3 id="ternary-operators">Ternary Operators</h3>
 
-<h3 id="destructuring-assignments">Destructuring assignments</h3>
+<p>The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
+The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> impleis has three main parts. First is the <strong>condition</strong>, that must resolve to a boolean(truthy or falsy) values. The second part is the part expression we&rsquo;d like to resolve to if the <code>condition</code> is true and the third part is when the condtion is false.</p>
 
-<h3 id="high-order-functions">High-order Functions</h3>
+<p><strong>The Syntax:</strong></p>
+
+<blockquote>
+<p><strong><em>(condition) ? exprIfTrue : exprIfFalse</em></strong></p>
+</blockquote>
+
+<p>Ternary opertaor is simply a more terse version of the <strong>if/eslse</strong> statement.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#75715e">// if/else statement
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">18</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>} <span style="color:#66d9ef">else</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span style="color:#75715e">// Equivalent Ternary Operator
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span style="color:#75715e"></span>(<span style="color:#a6e22e">age</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
+</code></pre></div>
+
+<p>Let&rsquo;s make a sharp comparison with <code>if/else</code> to get a clearer picture. For an <strong>if/else</strong> statement you start with a condition like so : <code>if(..condtion)</code>. In the preceeding <code>block</code> you then have the expression to run if the condition is true. <code>else</code> you want the code in the <strong>else</strong> block to run.</p>
+
+<blockquote>
+<p>Besides <strong><code>false</code></strong>, possible falsy expressions are: <strong><code>null</code></strong>, <strong><code>NaN</code></strong>, <strong><code>0</code></strong>, the empty string <strong><code>&quot; &quot;</code></strong>, and <strong><code>undefined</code></strong>. If condition is any of these, the result of the conditional expression will be <strong><code>exprIfFalse</code></strong>.</p>
+</blockquote>
+
+<p>Ternary operator can also be chained just like multiple if/else statements.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ifElseChain</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ){
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>){
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>    <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>  <span style="color:#66d9ef">else</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span style="color:#75715e">//equivalent ternary operator
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ternaryChain</span>(){
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>  <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>         <span style="color:#f92672">:</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>         <span style="color:#f92672">:</span><span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>}
+</code></pre></div>
+
+<p>Ternary operators are usually used for conditional rendering in React. Even for other case and every javascript code, the principle is same and quite straigtforward.</p>
+
+<p>Let&rsquo;s look at a simple example from a functional React component. This simply deteremines what to render depending on what the current value of <code>isLoading</code> is.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">LoadingIndicator</span>({ <span style="color:#a6e22e">isLoading</span> }) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#66d9ef">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    &lt;<span style="color:#f92672">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>      { <span style="color:#a6e22e">isLoading</span>            <span style="color:#75715e">// checks the value of isLoading
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#75715e"></span>        <span style="color:#f92672">?</span> &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">Loading</span>...&lt;/<span style="color:#f92672">p</span>&gt;  <span style="color:#75715e">// if true, render &#34;loading...&#34;
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#75715e"></span>        <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>               <span style="color:#75715e">// if false, render nothing as in null
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#75715e"></span>      }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>    &lt;/<span style="color:#f92672">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>  );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>}</code></pre></div>
+
+<h3 id="destructuring-assignments">Destructuring assignments</h3>
 
 <h3 id="arrow-functions">Arrow functions</h3>
 
