@@ -32,11 +32,11 @@ enableEmoji = "true"
   tag = "tags"
   category = "categories"
 
-# [[menu.main]]
-#   name = "About"
-#   weight = 1
-#   identifier = "hugo"
-#   url = "/hugo/"
+[[menu.main]]
+  name = "Portfolio"
+  weight = 1
+  identifier = "hugo"
+  url = "https://www.gitshowcase.com/olajohn-ajiboye"
 # [[menu.main]]
 #   name = "Projects"
 #   weight = 2

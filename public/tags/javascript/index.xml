@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>20% of the ES6 you will use 80% of the time while learning React.</title>
+      <title>The 20% Of ES6 you end up using 80% of the time - Let &amp; Const.</title>
       <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
       <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description>One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this bind(this) everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&amp;hellip;oh that was destructuring!</description>
+      <description>Varibale declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
+ One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.</description>
     </item>
     
   </channel>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ola John </title>
-    <link>http://olajohn.me/</link>
-    <description>Recent content on Ola John </description>
+    <title>beginner on Ola John </title>
+    <link>http://olajohn.me/tags/beginner/</link>
+    <description>Recent content in beginner on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jun 2019 21:59:33 +0300</lastBuildDate>
     
-	<atom:link href="http://olajohn.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://olajohn.me/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -33,15 +33,6 @@ The ternary operator as the word &lt;strong&gt;&amp;ldquo;ternary&amp;rdquo;&lt;
     </item>
     
     <item>
-      <title>Part 3 - ES6 Template Literals</title>
-      <link>http://olajohn.me/post/es6-template-literals/</link>
-      <pubDate>Thu, 06 Jun 2019 21:58:53 +0300</pubDate>
-      
-      <guid>http://olajohn.me/post/es6-template-literals/</guid>
-      <description>&lt;p&gt;String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Part 5 - ES6 Destructuring</title>
       <link>http://olajohn.me/post/es6-destructuring/</link>
       <pubDate>Thu, 06 Jun 2019 21:58:34 +0300</pubDate>
@@ -50,16 +41,6 @@ The ternary operator as the word &lt;strong&gt;&amp;ldquo;ternary&amp;rdquo;&lt;
       <description>&lt;blockquote&gt;
 &lt;p&gt;The &lt;strong&gt;destructuring assignment&lt;/strong&gt; syntax is a JavaScript expression that makes it possible to unpack values from &lt;code&gt;arrays&lt;/code&gt;, or &lt;em&gt;&lt;code&gt;properties&lt;/code&gt;&lt;/em&gt; from &lt;code&gt;objects&lt;/code&gt;, into &lt;strong&gt;distinct variables&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
-    </item>
-    
-    <item>
-      <title>The 20% Of ES6 you end up using 80% of the time - Let &amp; Const.</title>
-      <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
-      
-      <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description>Varibale declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
- One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.</description>
     </item>
     
   </channel>

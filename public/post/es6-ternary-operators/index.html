@@ -10,24 +10,28 @@
     
 
     
-    <title>Ola John&#39;s Dev Blog</title>
+    <title>Part 2 - ES6 Ternary Operators</title>
 
     
     
 
 
 
-
+  
   
   <meta name="author" content="Ola John Ajiboye" />
-  <meta name="description" content="Writing Javascript stuffs" />
+  <meta name="description" content="Ternary Operators 😍 The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement. The ternary operator as the word &amp;ldquo;ternary&amp;rdquo; implies has three main parts. The first is the condition, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&amp;rsquo;d like to resolve to if the condition is true and the third part is when the condtion is false.
+">
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@jolajiboye" />
-  <meta name="twitter:title" content="Ola John&#39;s Dev Blog" />
-  <meta name="twitter:description" content="Writing Javascript stuffs" />
-  <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@jolajiboye" />
+    <meta name="twitter:title" content="Part 2 - ES6 Ternary Operators" />
+    <meta name="twitter:description" content="Ternary Operators 😍 The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement. The ternary operator as the word &amp;ldquo;ternary&amp;rdquo; implies has three main parts. The first is the condition, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&amp;rsquo;d like to resolve to if the condition is true and the third part is when the condtion is false.
+" />
+    <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
+  
 
 
 
@@ -35,7 +39,7 @@
 <meta name="generator" content="Hugo 0.55.6">
 
 
-<link rel="canonical" href="http://olajohn.me/">
+<link rel="canonical" href="http://olajohn.me/post/es6-ternary-operators/">
 <link rel="alternative" href="/index.xml" title="Ola John " type="application/atom+xml">
 
 
@@ -155,7 +159,7 @@
     sizes="(max-width: 800px) 36px, 128px">
   </amp-img>
   
-    <h1 class="title"><a href="http://olajohn.me/" title="Ola John ">Ola John </a></h1>
+    <h2 class="title"><a href="http://olajohn.me/" title="Ola John ">Ola John </a></h2>
   
   <p class="subtitle">Javascript | Node | React | Vue</p>
   <button class="menu-toggle" type="button" on="tap:sidebar.open">
@@ -251,137 +255,110 @@
 </amp-sidebar>
 
     
-  <section class="main entry-list">
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Part 2 - ES6 Ternary Operators</h1>
+      <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 3 min read</p>
+    </header>
     
-    
+
+    <article class="post-content"><h3 id="ternary-operators">Ternary Operators 😍</h3>
+
+<p>The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the <strong>if</strong> statement.
+The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> implies has three main parts. The first is the <strong>condition</strong>, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&rsquo;d like to resolve to if the <code>condition</code> is <strong>true</strong> and the third part is when the <code>condtion</code> is <strong>false</strong>.</p>
+
+<h3 id="ternary-operators-1">Ternary Operators 😍</h3>
+
+<p>The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the <strong>if</strong> statement.
+The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> implies has three main parts. The first is the <strong>condition</strong>, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&rsquo;d like to resolve to if the <code>condition</code> is <strong>true</strong> and the third part is when the <code>condtion</code> is <strong>false</strong>.</p>
+
+<p><strong>The Syntax:</strong></p>
+
+<blockquote>
+<p><strong><em>(condition) ? exprIfTrue : exprIfFalse</em></strong></p>
+
+<p><em>Ternary opertaor is simply a more terse version of the <code>if/else</code> statement</em>.</p>
+</blockquote>
+
+<p>Let&rsquo;s make a sharp comparison with <code>if/else</code> to get a clearer picture. For an <strong>if/else</strong> statement you start with a condition like so : <code>if(..condtion)</code>. In the preceeding <code>block</code> you then have the expression to run if the condition is true. <code>else</code> you want the code in the <strong>else</strong> block to run.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// if/else statement
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">18</span>) {
+  <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span>
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
+}
+<span style="color:#75715e">// Equivalent Ternary
+</span><span style="color:#75715e"></span>(<span style="color:#a6e22e">age</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
+</code></pre></div>
+
+<blockquote>
+<p>Besides <strong><code>false</code></strong>, possible falsy expressions are: <strong><code>null</code></strong>, <strong><code>NaN</code></strong>, <strong><code>0</code></strong>, the empty string <strong><code>&quot; &quot;</code></strong>, and <strong><code>undefined</code></strong>. If condition is any of these, the result of the conditional expression will be <strong><code>exprIfFalse</code></strong>.</p>
+</blockquote>
+
+<p>Ternary operator can also be chained just like multiple <em><code>if/else</code></em> statements.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ifElseChain</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ){
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
+  }
+  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>){
+    <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
+  }
+  <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
+  }
+}
+
+<span style="color:#75715e">//equivalent ternary operator
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ternaryChain</span>(){
+  <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
+         <span style="color:#f92672">:</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
+         <span style="color:#f92672">:</span><span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
+
+}
+</code></pre></div>
+
+<p>Ternary operators are usually used for conditional rendering in React. Even for other case and every javascript code, the principle is same and quite straigtforward.</p>
+
+<p>Let&rsquo;s look at a simple example from a functional React component. This simply determines what to render depending on what the current value of <code>isLoading</code> is.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">LoadingIndicator</span>({ <span style="color:#a6e22e">isLoading</span> }) {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+      { <span style="color:#a6e22e">isLoading</span>            <span style="color:#75715e">// checks the value of isLoading
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">?</span> &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">Loading</span>...&lt;/<span style="color:#f92672">p</span>&gt;  <span style="color:#75715e">// if true, render &#34;loading...&#34;
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>               <span style="color:#75715e">// if false, render nothing as in null
+</span><span style="color:#75715e"></span>      }
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+}</code></pre></div></article>
+    <footer class="post-footer">
       
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-ternary-operators/" title="Part 2 - ES6 Ternary Operators" class="entry-link">Part 2 - ES6 Ternary Operators</a></h3>
-  </header>
-
-  <p class="entry-summary">Ternary Operators 😍 The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement. The ternary operator as the word “ternary” implies has three main parts. The first is the condition, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we’d like to resolve to if the condition is true and the third part is when the condtion is false.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 3 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%202%20-%20ES6%20Ternary%20Operators&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%202%20-%20ES6%20Ternary%20Operators&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
+      <ul class="post-tags">
+        
+          <li class="post-tag"><a href="/tags/es6"><span class="tag">Es6</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/beginner"><span class="tag">Beginner</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/coding"><span class="tag">Coding</span></a></li>
+        
+      </ul>
       
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-module-system/" title="Part 4 - ES6 Module System" class="entry-link">Part 4 - ES6 Module System</a></h3>
-  </header>
-
-  <p class="entry-summary">ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that here, here and here. Instead I will provide a quick overview of what they are and how to quickly get started with them.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 7 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-module-system%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%204%20-%20ES6%20Module%20System&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-module-system%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%204%20-%20ES6%20Module%20System&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-module-system%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-template-literals/" title="Part 3 - ES6 Template Literals" class="entry-link">Part 3 - ES6 Template Literals</a></h3>
-  </header>
-
-  <p class="entry-summary">String interpolation and multi-line strings are probably most of the template strings concepts you’ll encounter working with modern Javascript.Template strings are declared using the back ticks.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 2 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-template-literals%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%203%20-%20ES6%20Template%20Literals&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-template-literals%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%203%20-%20ES6%20Template%20Literals&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-template-literals%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-destructuring/" title="Part 5 - ES6 Destructuring" class="entry-link">Part 5 - ES6 Destructuring</a></h3>
-  </header>
-
-  <p class="entry-summary"> The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 6 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%205%20-%20ES6%20Destructuring&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%205%20-%20ES6%20Destructuring&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/" title="The 20% Of ES6 you end up using 80% of the time - Let &amp; Const." class="entry-link">The 20% Of ES6 you end up using 80% of the time - Let &amp; Const.</a></h3>
-  </header>
-
-  <p class="entry-summary">Varibale declaration with let &amp; const  This is the first part in the series. I will be covering the other sections in part 2.
- One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 2, 2019</span> 6 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=The%2020%25%20Of%20ES6%20you%20end%20up%20using%2080%25%20of%20the%20time%20-%20Let%20%26%20Const.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=The%2020%25%20Of%20ES6%20you%20end%20up%20using%2080%25%20of%20the%20time%20-%20Let%20%26%20Const.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-    
-    
+      <div class="sharing">
+        <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Facebook">
+          <svg class="icon icon-facebook" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
+        </a>
+        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%202%20-%20ES6%20Ternary%20Operators&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Twitter">
+          <svg class="icon icon-twitter" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
+        </a>
+        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%202%20-%20ES6%20Ternary%20Operators&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Google+">
+          <svg class="icon icon-google" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
+        </a>
+      </div>
+    </footer>
   </section>
 
     <footer class="footer">

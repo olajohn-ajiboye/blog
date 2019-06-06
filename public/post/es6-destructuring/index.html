@@ -10,24 +10,28 @@
     
 
     
-    <title>Ola John&#39;s Dev Blog</title>
+    <title>Part 5 - ES6 Destructuring</title>
 
     
     
 
 
 
-
+  
   
   <meta name="author" content="Ola John Ajiboye" />
-  <meta name="description" content="Writing Javascript stuffs" />
+  <meta name="description" content=" The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+">
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@jolajiboye" />
-  <meta name="twitter:title" content="Ola John&#39;s Dev Blog" />
-  <meta name="twitter:description" content="Writing Javascript stuffs" />
-  <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@jolajiboye" />
+    <meta name="twitter:title" content="Part 5 - ES6 Destructuring" />
+    <meta name="twitter:description" content=" The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+" />
+    <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
+  
 
 
 
@@ -35,7 +39,7 @@
 <meta name="generator" content="Hugo 0.55.6">
 
 
-<link rel="canonical" href="http://olajohn.me/">
+<link rel="canonical" href="http://olajohn.me/post/es6-destructuring/">
 <link rel="alternative" href="/index.xml" title="Ola John " type="application/atom+xml">
 
 
@@ -155,7 +159,7 @@
     sizes="(max-width: 800px) 36px, 128px">
   </amp-img>
   
-    <h1 class="title"><a href="http://olajohn.me/" title="Ola John ">Ola John </a></h1>
+    <h2 class="title"><a href="http://olajohn.me/" title="Ola John ">Ola John </a></h2>
   
   <p class="subtitle">Javascript | Node | React | Vue</p>
   <button class="menu-toggle" type="button" on="tap:sidebar.open">
@@ -251,137 +255,226 @@
 </amp-sidebar>
 
     
-  <section class="main entry-list">
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Part 5 - ES6 Destructuring</h1>
+      <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 6 min read</p>
+    </header>
     
-    
+
+    <article class="post-content"><blockquote>
+<p>The <strong>destructuring assignment</strong> syntax is a JavaScript expression that makes it possible to unpack values from <code>arrays</code>, or <em><code>properties</code></em> from <code>objects</code>, into <strong>distinct variables</strong>.</p>
+</blockquote>
+
+<h3 id="destructuring-assignments">Destructuring assignments 👌</h3>
+
+<p><em><code>Destructuring</code></em> is one of the most common concept you&rsquo;d find looking at any React Code base. It is quite straightforward to decipher but can look daunting for beginners at first.
+We&rsquo;ll look at this in two parts, <strong>array</strong> and <strong>object</strong> destructuring in progressively complex example.</p>
+
+<ul>
+<li><strong>Array destructuring 💥</strong></li>
+</ul>
+
+<blockquote>
+<p>Let&rsquo;s say you have an array of of my profile.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// with ES5
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">profile</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Ola&#34;</span>, <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;ElCapito&#34;</span>, <span style="color:#e6db74">&#34;SWE&#34;</span>, <span style="color:#e6db74">&#34;Nigeria&#34;</span>]
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">profile</span>[<span style="color:#ae81ff">0</span>]
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>[<span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">nickName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>[<span style="color:#ae81ff">2</span>]
+
+<span style="color:#75715e">// With ES6 destructuring
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">firstName</span>,<span style="color:#a6e22e">lastName</span>,<span style="color:#a6e22e">nickName</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">firstName</span>,<span style="color:#a6e22e">lastName</span>,<span style="color:#a6e22e">nickName</span>) <span style="color:#75715e">//Ola John ElCapito
+</span></code></pre></div>
+It is obviosuly neater with the ES6 destructuring.</p>
+</blockquote>
+
+<ul>
+<li><strong>Skipping items</strong></li>
+</ul>
+
+<p>One thing to take note of, is that the destructured variables has to be mapped to the same index as the destructured array. If you want to access let&rsquo;s say the 4th element in the array at <strong><code>index 3</code>(&ldquo;Nigeria&rdquo;)</strong> and map it to variable <strong>country</strong>, you can&rsquo;t just simply do <code>let [country] = profile</code>. You will need to take account of the first 3 elements. What if you don&rsquo;t need them? Then you need a comma as a placeholder to skip items in the array you do not need. Let&rsquo;s have a look</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">profile</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Ola&#34;</span>, <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;ElCapito&#34;</span>, <span style="color:#e6db74">&#34;SWE&#34;</span>, <span style="color:#e6db74">&#34;Nigeria&#34;</span>]
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">firstName</span>,<span style="color:#a6e22e">lastName</span>, , <span style="color:#a6e22e">job</span>,<span style="color:#a6e22e">country</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">firstName</span>,<span style="color:#a6e22e">lastName</span>,<span style="color:#a6e22e">job</span>,<span style="color:#a6e22e">country</span>) <span style="color:#75715e">//Ola John SWE Nigeria
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/* Notice that I have replaced the nickname variable with a comma
+</span><span style="color:#75715e">   You can skip as much element as you need by replacing them with a coma */</span>
+
+<span style="color:#75715e">// let&#39;s skip firstName and job
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [, <span style="color:#a6e22e">lastName</span>,<span style="color:#a6e22e">nickName</span>, , <span style="color:#a6e22e">country</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lastName</span>,<span style="color:#a6e22e">nickName</span>,<span style="color:#a6e22e">country</span>) <span style="color:#75715e">//John ElCapito Nigeria
+</span></code></pre></div>
+
+<ul>
+<li><strong>Default values</strong></li>
+</ul>
+
+<blockquote>
+<p>A variable can be assigned a default, in the case that the value unpacked from the array is <em><code>undefined</code></em> Let&rsquo;s consider an example below.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">profile</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;ElCapito&#34;</span>]
+
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">realName</span>, <span style="color:#a6e22e">nickName</span>, <span style="color:#a6e22e">superPower</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">realName</span>, <span style="color:#a6e22e">nickName</span>, <span style="color:#a6e22e">superPower</span> ) <span style="color:#75715e">// &#34;John ElCapito undefined&#34;
+</span></code></pre></div></p>
+</blockquote>
+
+<p>We can use a defult value instead. So if the value should ever be <em><code>undefined</code></em> it is replaced by this <em><code>deafult</code></em> value.Like so:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">realName</span>, <span style="color:#a6e22e">nickName</span>, <span style="color:#a6e22e">superPower</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Javascript&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">realName</span>, <span style="color:#a6e22e">nickName</span>, <span style="color:#a6e22e">superPower</span>) <span style="color:#75715e">// &#34;John ElCapito Javascript&#34;
+</span></code></pre></div>
+
+<ul>
+<li><strong>Swapping Variables</strong></li>
+</ul>
+
+<p>ES6 array destructuring gives a more elegant way to swap variables in an array. With ES5 you had to rely on some cumbersome XOR tricks to get this done
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realName</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;John&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">nickName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;El Capito&#34;</span>;    <span style="color:#75715e">// this semicolon is mandatory.Otherwise you get an error.
+</span><span style="color:#75715e"></span>
+[<span style="color:#a6e22e">realName</span>, <span style="color:#a6e22e">nickName</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">nickName</span>, <span style="color:#a6e22e">realName</span>]
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">realName</span>) <span style="color:#75715e">// &#34;John&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">nickName</span>) <span style="color:#75715e">// &#34;ElCapito&#34;
+</span></code></pre></div></p>
+
+<ul>
+<li><strong>Object destructuring 🔥</strong></li>
+</ul>
+
+<p>Destructuring simply means breaking a more complex entity into smaller parts. <em><code>Object destructuring</code></em> helps breaks down a objects properties into smaller variables. This concept is very common in modern Javascript frameworks. <em><code>Object destructuring</code></em> seems to be much common that it&rsquo;s array counter part. Let&rsquo;s imagine you have an object containing data for a college student. It is much easier to work with a destructured version of the data when all variables have been broken down (<strong><code>destructured</code></strong>) into smaller parts. Let&rsquo;s take a stab at this with examples.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ola John&#34;</span>,
+  <span style="color:#a6e22e">faculty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;law&#34;</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>,
+  <span style="color:#a6e22e">expectedYearOfGraduation</span> <span style="color:#f92672">:</span>  <span style="color:#ae81ff">2052</span>,
+  <span style="color:#a6e22e">isStudentBroke</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">gpa</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.42</span>
+}
+
+<span style="color:#75715e">// Lets make sense of this student&#39;s data
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//without destructuring
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">name</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">faculty</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">faculty</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">age</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">expectedYearOfGraduation</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">expectedYearOfGraduation</span>
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">gpa</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">gpa</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">broke</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">broke</span>
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`My name is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, I am in Faculty of </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">faculty</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.
+</span><span style="color:#e6db74">I am </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74">years old. My GPA is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">gpa</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">isStudentBroke</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> I am really broke`</span>)
+<span style="color:#a6e22e">Output</span><span style="color:#f92672">:</span> <span style="color:#75715e">// My name is Ola John, I am in Faculty of law.
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//I am 25years old. My GPA is 0.42 and true I am really broke
+</span></code></pre></div></p>
+
+<p>You can easily see how repitive the code is, how many time I had to assign variables from the <code>student</code> variable with <code>let</code>. Asides the verbosity and repition, this is prone to error. I could easily misspell one of the variables after repeatedly declaring over and over. What if we could just extract all this variables with one variable assignment? Easy-peasy with <em><code>Object destructuring</code></em>. All you have to do is reference the variables we want to destructure into with the key in the object we are extracting from. &ldquo;Enough jargons&hellip;show me the code&rdquo; I heard you!!!</p>
+
+<blockquote>
+<p>Here we go. Let&rsquo;s destructure the previous <em><code>student</code></em> example. .
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ola John&#34;</span>,
+  <span style="color:#a6e22e">faculty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;law&#34;</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>,
+  <span style="color:#a6e22e">expectedYearOfGraduation</span> <span style="color:#f92672">:</span>  <span style="color:#ae81ff">2052</span>,
+  <span style="color:#a6e22e">isStudentBroke</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">gpa</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.42</span>
+}
+<span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span>, <span style="color:#a6e22e">gpa</span>, <span style="color:#a6e22e">broke</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`My name is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, I am in Faculty of </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">faculty</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.
+</span><span style="color:#e6db74">I am </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74">years old. My GPA is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">gpa</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">isStudentBroke</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> I am really broke`</span>)
+<span style="color:#75715e">// My name is Ola John, I am in Faculty of law.
+</span><span style="color:#75715e">//I am 25years old. My GPA is 0.42 and true I am really broke
+</span></code></pre></div>
+Isn&rsquo;t that beautiful?, comapred to what we had up there. Terse, straight to the point and elegant.</p>
+</blockquote>
+
+<ul>
+<li><strong>Assigning to new variable names</strong></li>
+</ul>
+
+<blockquote>
+<p>A property can be unpacked from an object and assigned to a variable with a different name than the object property</p>
+</blockquote>
+
+<p>What does that even mean?. It implies that you can decide to give a different name other than the name in the original object. Let&rsquo;s go back to our broke student. Imagine for a second that we have to use the <em><code>isStudentBroke</code></em> and/or the <em><code>expectedYearOfGraduation</code></em>  properties from the <strong>student</strong> object, we can rename them to something shorter for easy reference throughout the code. You could rename for many other reasons, but how?. Code sample to the rescue once more.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">year</span>, <span style="color:#a6e22e">gpa</span>, <span style="color:#a6e22e">isStudentBroke</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">broke</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>
+<span style="color:#75715e">// now expectedYearOfGraduation is now re-assgned to  year and isStudentBroke to broke
+</span></code></pre></div></p>
+
+<ul>
+<li><strong>Assigning to new default values</strong></li>
+</ul>
+
+<blockquote>
+<p>A variable can be assigned a default value, in the case that the value unpacked from the object is <em><code>undefined</code></em>.</p>
+</blockquote>
+
+<p>Let&rsquo;s say our broke student decides to not enter his broke status or gpa for instance. If we try to destructure them , we get <em><code>undefined</code></em>. Let&rsquo;s see:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ola John&#34;</span>,
+  <span style="color:#a6e22e">faculty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;law&#34;</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>,
+  <span style="color:#a6e22e">expectedYearOfGraduation</span> <span style="color:#f92672">:</span>  <span style="color:#ae81ff">2052</span>,
+}
+<span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span>, <span style="color:#a6e22e">gpa</span>, <span style="color:#a6e22e">isStudentBroke</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span>, <span style="color:#a6e22e">gpa</span>, <span style="color:#a6e22e">isStudentBroke</span> ) <span style="color:#75715e">//Ola John law 25 2052 undefined undefined
+</span></code></pre></div></p>
+
+<p>What if we wanted to have default values whenever <em><code>broke</code></em> students with low <em><code>gpa</code></em> decides not to enter these details. We can set default values just like with <em><code>array destructuring</code></em>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">brokeStudent</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ola John&#34;</span>,
+  <span style="color:#a6e22e">faculty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;law&#34;</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>,
+  <span style="color:#a6e22e">expectedYearOfGraduation</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2052</span>,
+}
+<span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span>, <span style="color:#a6e22e">gpa</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">broke</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">brokeStudent</span>
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span>, <span style="color:#a6e22e">gpa</span>, <span style="color:#a6e22e">broke</span>) <span style="color:#75715e">//Ola John law 25 2052 0 true
+</span><span style="color:#75715e">// now every broke student who didn&#39;t have those properties set will be considered broke and with gpa of 0...
+</span></code></pre></div></p>
+
+<ul>
+<li><strong>Assigning to new variables names and providing default values</strong></li>
+</ul>
+
+<blockquote>
+<p>We could also assign new variable names and provide default values all within one destructuring assignment. Like so:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">faculty</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">expectedYearOfGraduation</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">year</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2025</span> , <span style="color:#a6e22e">gpa</span>, <span style="color:#a6e22e">isStudentBroke</span><span style="color:#f92672">:</span><span style="color:#a6e22e">broke</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">student</span>
+</code></pre></div></p>
+</blockquote>
+
+<p>For more in depth documentation of <em><code>Object destructuring</code></em> I highly reocmmend the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">mozilla</a> documentation.</p></article>
+    <footer class="post-footer">
       
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-ternary-operators/" title="Part 2 - ES6 Ternary Operators" class="entry-link">Part 2 - ES6 Ternary Operators</a></h3>
-  </header>
-
-  <p class="entry-summary">Ternary Operators 😍 The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement. The ternary operator as the word “ternary” implies has three main parts. The first is the condition, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we’d like to resolve to if the condition is true and the third part is when the condtion is false.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 3 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%202%20-%20ES6%20Ternary%20Operators&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%202%20-%20ES6%20Ternary%20Operators&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-ternary-operators%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
+      <ul class="post-tags">
+        
+          <li class="post-tag"><a href="/tags/destructuring"><span class="tag">Destructuring</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/es6"><span class="tag">ES6</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/beginner"><span class="tag">Beginner</span></a></li>
+        
+      </ul>
       
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-module-system/" title="Part 4 - ES6 Module System" class="entry-link">Part 4 - ES6 Module System</a></h3>
-  </header>
-
-  <p class="entry-summary">ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that here, here and here. Instead I will provide a quick overview of what they are and how to quickly get started with them.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 7 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-module-system%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%204%20-%20ES6%20Module%20System&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-module-system%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%204%20-%20ES6%20Module%20System&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-module-system%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-template-literals/" title="Part 3 - ES6 Template Literals" class="entry-link">Part 3 - ES6 Template Literals</a></h3>
-  </header>
-
-  <p class="entry-summary">String interpolation and multi-line strings are probably most of the template strings concepts you’ll encounter working with modern Javascript.Template strings are declared using the back ticks.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 2 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-template-literals%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%203%20-%20ES6%20Template%20Literals&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-template-literals%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%203%20-%20ES6%20Template%20Literals&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-template-literals%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/es6-destructuring/" title="Part 5 - ES6 Destructuring" class="entry-link">Part 5 - ES6 Destructuring</a></h3>
-  </header>
-
-  <p class="entry-summary"> The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
-</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 6 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%205%20-%20ES6%20Destructuring&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%205%20-%20ES6%20Destructuring&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/" title="The 20% Of ES6 you end up using 80% of the time - Let &amp; Const." class="entry-link">The 20% Of ES6 you end up using 80% of the time - Let &amp; Const.</a></h3>
-  </header>
-
-  <p class="entry-summary">Varibale declaration with let &amp; const  This is the first part in the series. I will be covering the other sections in part 2.
- One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 2, 2019</span> 6 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=The%2020%25%20Of%20ES6%20you%20end%20up%20using%2080%25%20of%20the%20time%20-%20Let%20%26%20Const.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-      <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=The%2020%25%20Of%20ES6%20you%20end%20up%20using%2080%25%20of%20the%20time%20-%20Let%20%26%20Const.&amp;url=http%3a%2f%2folajohn.me%2fpost%2fmost-of-the-es6-you-need-get-started-really-well-with-react%2f" title="Share on Google+">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-    
-    
+      <div class="sharing">
+        <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Facebook">
+          <svg class="icon icon-facebook" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
+        </a>
+        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Part%205%20-%20ES6%20Destructuring&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Twitter">
+          <svg class="icon icon-twitter" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
+        </a>
+        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Part%205%20-%20ES6%20Destructuring&amp;url=http%3a%2f%2folajohn.me%2fpost%2fes6-destructuring%2f" title="Share on Google+">
+          <svg class="icon icon-google" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
+        </a>
+      </div>
+    </footer>
   </section>
 
     <footer class="footer">

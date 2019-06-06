@@ -3,36 +3,75 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</loc>
-    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
+    <loc>http://olajohn.me/</loc>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/es6-ternary-operators/</loc>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/</loc>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/</loc>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/beginner/</loc>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://olajohn.me/tags/coding/</loc>
-    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://olajohn.me/tags/es6/</loc>
-    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
+    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/es6-module-system/</loc>
+    <lastmod>2019-06-06T21:59:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/es6-template-literals/</loc>
+    <lastmod>2019-06-06T21:58:53+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/strings/</loc>
+    <lastmod>2019-06-06T21:58:53+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/destructuring/</loc>
+    <lastmod>2019-06-06T21:58:34+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/es6-destructuring/</loc>
+    <lastmod>2019-06-06T21:58:34+03:00</lastmod>
   </url>
   
   <url>
     <loc>http://olajohn.me/tags/javascript/</loc>
-    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/</loc>
-    <lastmod>2019-06-02T23:27:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/post/</loc>
     <lastmod>2019-06-02T23:27:34+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -44,9 +83,8 @@
   </url>
   
   <url>
-    <loc>http://olajohn.me/tags/</loc>
+    <loc>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</loc>
     <lastmod>2019-06-02T23:27:34+03:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

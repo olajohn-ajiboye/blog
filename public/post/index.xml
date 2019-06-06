@@ -6,18 +6,60 @@
     <description>Recent content in Posts on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2019 23:27:34 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 21:59:33 +0300</lastBuildDate>
     
 	<atom:link href="http://olajohn.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>20% of the ES6 you will use 80% of the time while learning React.</title>
+      <title>Part 2 - ES6 Ternary Operators</title>
+      <link>http://olajohn.me/post/es6-ternary-operators/</link>
+      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-ternary-operators/</guid>
+      <description>&lt;h3 id=&#34;ternary-operators&#34;&gt;Ternary Operators 😍&lt;/h3&gt;
+
+&lt;p&gt;The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the &lt;strong&gt;if&lt;/strong&gt; statement.
+The ternary operator as the word &lt;strong&gt;&amp;ldquo;ternary&amp;rdquo;&lt;/strong&gt; implies has three main parts. The first is the &lt;strong&gt;condition&lt;/strong&gt;, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&amp;rsquo;d like to resolve to if the &lt;code&gt;condition&lt;/code&gt; is &lt;strong&gt;true&lt;/strong&gt; and the third part is when the &lt;code&gt;condtion&lt;/code&gt; is &lt;strong&gt;false&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Part 4 - ES6 Module System</title>
+      <link>http://olajohn.me/post/es6-module-system/</link>
+      <pubDate>Thu, 06 Jun 2019 21:59:11 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-module-system/</guid>
+      <description>&lt;p&gt;ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that &lt;a href=&#34;https://exploringjs.com/es6/ch_modules.html&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.sitepoint.com/understanding-es6-modules/&#34;&gt;here&lt;/a&gt;. Instead I will provide a quick overview of what they are and how to quickly get started with them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Part 3 - ES6 Template Literals</title>
+      <link>http://olajohn.me/post/es6-template-literals/</link>
+      <pubDate>Thu, 06 Jun 2019 21:58:53 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-template-literals/</guid>
+      <description>&lt;p&gt;String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Part 5 - ES6 Destructuring</title>
+      <link>http://olajohn.me/post/es6-destructuring/</link>
+      <pubDate>Thu, 06 Jun 2019 21:58:34 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-destructuring/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;destructuring assignment&lt;/strong&gt; syntax is a JavaScript expression that makes it possible to unpack values from &lt;code&gt;arrays&lt;/code&gt;, or &lt;em&gt;&lt;code&gt;properties&lt;/code&gt;&lt;/em&gt; from &lt;code&gt;objects&lt;/code&gt;, into &lt;strong&gt;distinct variables&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>The 20% Of ES6 you end up using 80% of the time - Let &amp; Const.</title>
       <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
       <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description>One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this bind(this) everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&amp;hellip;oh that was destructuring!</description>
+      <description>Varibale declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
+ One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.</description>
     </item>
     
   </channel>
