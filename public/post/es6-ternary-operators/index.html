@@ -20,7 +20,7 @@
   
   
   <meta name="author" content="Ola John Ajiboye" />
-  <meta name="description" content="Ternary Operators 😍 The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement. The ternary operator as the word &amp;ldquo;ternary&amp;rdquo; implies has three main parts. The first is the condition, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&amp;rsquo;d like to resolve to if the condition is true and the third part is when the condtion is false.
+  <meta name="description" content="Ternary Operators 😍  The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
 ">
 
   
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jolajiboye" />
     <meta name="twitter:title" content="Part 2 - ES6 Ternary Operators" />
-    <meta name="twitter:description" content="Ternary Operators 😍 The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement. The ternary operator as the word &amp;ldquo;ternary&amp;rdquo; implies has three main parts. The first is the condition, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&amp;rsquo;d like to resolve to if the condition is true and the third part is when the condtion is false.
+    <meta name="twitter:description" content="Ternary Operators 😍  The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
 " />
     <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
   
@@ -175,8 +175,6 @@
       
         <li class="menu-item "><a href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
       
-        <li class="menu-item "><a href="/tags/">Tags</a></li>
-      
     </ul>
   </nav>
 
@@ -249,8 +247,6 @@
     
       <li class="sidebar-item "><a class="sidebar-link" href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
     
-      <li class="sidebar-item "><a class="sidebar-link" href="/tags/">Tags</a></li>
-    
   </ul>
 </amp-sidebar>
 
@@ -258,36 +254,34 @@
   <section class="main post-detail">
     <header class="post-header">
       <h1 class="post-title">Part 2 - ES6 Ternary Operators</h1>
-      <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 3 min read</p>
+      <p class="entry-meta"><span class="entry-time">Jun 6, 2019</span> 2 min read</p>
     </header>
     
 
     <article class="post-content"><h3 id="ternary-operators">Ternary Operators 😍</h3>
 
-<p>The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the <strong>if</strong> statement.
-The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> implies has three main parts. The first is the <strong>condition</strong>, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&rsquo;d like to resolve to if the <code>condition</code> is <strong>true</strong> and the third part is when the <code>condtion</code> is <strong>false</strong>.</p>
+<blockquote>
+<p>The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the <strong>if</strong> statement.</p>
+</blockquote>
 
-<h3 id="ternary-operators-1">Ternary Operators 😍</h3>
-
-<p>The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the <strong>if</strong> statement.
-The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> implies has three main parts. The first is the <strong>condition</strong>, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&rsquo;d like to resolve to if the <code>condition</code> is <strong>true</strong> and the third part is when the <code>condtion</code> is <strong>false</strong>.</p>
+<p>The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> implies has three main parts. The first is the <strong>condition</strong>, that must resolve to a boolean(truthy or falsy) values. The second part is the expression we&rsquo;d like to resolve if the <code>condition</code> is <strong>true</strong> and the third part is when the <code>condition</code> is <strong>false</strong>.</p>
 
 <p><strong>The Syntax:</strong></p>
 
 <blockquote>
 <p><strong><em>(condition) ? exprIfTrue : exprIfFalse</em></strong></p>
 
-<p><em>Ternary opertaor is simply a more terse version of the <code>if/else</code> statement</em>.</p>
+<p><em>Ternary operator is simply a more terse version of the <code>if/else</code> statement</em>.</p>
 </blockquote>
 
-<p>Let&rsquo;s make a sharp comparison with <code>if/else</code> to get a clearer picture. For an <strong>if/else</strong> statement you start with a condition like so : <code>if(..condtion)</code>. In the preceeding <code>block</code> you then have the expression to run if the condition is true. <code>else</code> you want the code in the <strong>else</strong> block to run.</p>
+<p>Let&rsquo;s make a sharp comparison with <code>if/else</code> to get a clearer picture. For an <strong>if/else</strong> statement you start with a condition like so : <code>if(..condition)</code>. In the preceding <code>block</code> you then have the expression to run if the condition is true. <code>else</code> you want the code in the <strong>else</strong> block to run.</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// if/else statement
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
 <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">18</span>) {
-  <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span>
+ <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span>
 } <span style="color:#66d9ef">else</span> {
-  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
+ <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
 }
 <span style="color:#75715e">// Equivalent Ternary
 </span><span style="color:#75715e"></span>(<span style="color:#a6e22e">age</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are allowed to have a Beer&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Nope&#34;</span>
@@ -300,50 +294,52 @@ The ternary operator as the word <strong>&ldquo;ternary&rdquo;</strong> implies 
 <p>Ternary operator can also be chained just like multiple <em><code>if/else</code></em> statements.</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ifElseChain</span>() {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
-  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ){
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
-  }
-  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>){
-    <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
-  }
-  <span style="color:#66d9ef">else</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
-  }
+ <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+ <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ){
+   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
+ }
+ <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>){
+   <span style="color:#66d9ef">return</span>  <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
+ }
+ <span style="color:#66d9ef">else</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
+ }
 }
 
 <span style="color:#75715e">//equivalent ternary operator
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ternaryChain</span>(){
-  <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
-         <span style="color:#f92672">:</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
-         <span style="color:#f92672">:</span><span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
+ <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> ) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are Pre-teen&#34;</span>
+        <span style="color:#f92672">:</span>(<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;You are a Teenager&#34;</span>
+        <span style="color:#f92672">:</span><span style="color:#e6db74">&#34;You are grown ass adult&#34;</span>
 
 }
 </code></pre></div>
 
-<p>Ternary operators are usually used for conditional rendering in React. Even for other case and every javascript code, the principle is same and quite straigtforward.</p>
+<p>Ternary operators are usually used for conditional rendering in React. Even for other case and every javascript code, the principle is same and quite straightforward.</p>
 
 <p>Let&rsquo;s look at a simple example from a functional React component. This simply determines what to render depending on what the current value of <code>isLoading</code> is.</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">LoadingIndicator</span>({ <span style="color:#a6e22e">isLoading</span> }) {
-  <span style="color:#66d9ef">return</span> (
-    &lt;<span style="color:#f92672">div</span>&gt;
-      { <span style="color:#a6e22e">isLoading</span>            <span style="color:#75715e">// checks the value of isLoading
-</span><span style="color:#75715e"></span>        <span style="color:#f92672">?</span> &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">Loading</span>...&lt;/<span style="color:#f92672">p</span>&gt;  <span style="color:#75715e">// if true, render &#34;loading...&#34;
-</span><span style="color:#75715e"></span>        <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>               <span style="color:#75715e">// if false, render nothing as in null
-</span><span style="color:#75715e"></span>      }
-    &lt;/<span style="color:#f92672">div</span>&gt;
-  );
+ <span style="color:#66d9ef">return</span> (
+   &lt;<span style="color:#f92672">div</span>&gt;
+     { <span style="color:#a6e22e">isLoading</span>            <span style="color:#75715e">// checks the value of isLoading
+</span><span style="color:#75715e"></span>       <span style="color:#f92672">?</span> &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">Loading</span>...&lt;/<span style="color:#f92672">p</span>&gt;  <span style="color:#75715e">// if true, render &#34;loading...&#34;
+</span><span style="color:#75715e"></span>       <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>               <span style="color:#75715e">// if false, render nothing as in null
+</span><span style="color:#75715e"></span>     }
+   &lt;/<span style="color:#f92672">div</span>&gt;
+ );
 }</code></pre></div></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
         
-          <li class="post-tag"><a href="/tags/es6"><span class="tag">Es6</span></a></li>
+          <li class="post-tag"><a href="/tags/es6"><span class="tag">ES6</span></a></li>
         
           <li class="post-tag"><a href="/tags/beginner"><span class="tag">Beginner</span></a></li>
         
           <li class="post-tag"><a href="/tags/coding"><span class="tag">Coding</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/javascript"><span class="tag">Javascript</span></a></li>
         
       </ul>
       

@@ -1,30 +1,16 @@
-const aid = {
-  comment: "Comment",
-  ratings: 35
-}
+// function june() {
+//   return ("The test of a man's strenth ")
+// }
 
-let { comment, ratings } = aid;
-
-ratings = 1 / 2
-console.log(comment, ratings)
-
-// export const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
-// export const FETCH_USER_FULFILLED = 'FETCH_USER_FULFILLED';
-// export const FETCH_USER_REJECTED = 'FETCH_USER_REJECTED';
-
-// export const UPDATE_USER_REQUEST = 'UPDATE_USER_REQUEST';
-// export const UPDATE_USER_FULFILLED = 'UPDATE_USER_FULFILLED';
-// export const UPDATE_USER_REJECTED = 'UPDATE_USER_REJECTED';
-
-// export const SAVE_SESSION_REQUEST = 'SAVE_SESSION_REQUEST';
-// export const SAVE_SESSION = 'SAVE_SESSION';
-// export const REMOVE_SESSION = 'REMOVE_SESSION';
-
-
-const FETCH_USER = ['FETCH_USER_REQUEST', 'FETCH_USER_FULFILLED', 'FETCH_USER_REJECTED']
-const UPDATE_USER = ['UPDATE_USER_REQUEST', 'UPDATE_USER_FULFILLED', 'UPDATE_USER_REJECTED']
-const SAVE = ['SAVE_SESSION_REQUEST', 'SAVE_SESSION']
-
-const [FETCH_USER_REQUEST, FETCH_USER_FULFILLED, FETCH_USER_REJECTED] = FETCH_USER
-
-console.log(FETCH_USER_REQUEST, FETCH_USER_FULFILLED, FETCH_USER_REJECTED)
+// const jesus = " Son of God"
+// const profile = {
+//   name: "john",
+//   job: "SWE",
+//   love: "Wife",
+//   age: 20
+// }
+const arr = [1, 2, 3, 4];
+const b = arr.forEach(element => {
+  return element ** 2;
+});
+console.log(b)

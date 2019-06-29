@@ -1,16 +1,17 @@
 ---
 title: "Part 5 - ES6 Destructuring"
 author: "Ola John Ajiboye"
-tags: ["Destructuring", "ES6", "beginner"]
+tags: ["Destructuring", "ES6", "Beginner","Javascript"]
 date: 2019-06-06T21:59:33+03:00
 draft: false
 ---
+### Destructuring assignments :ok_hand:
 
 > The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from `arrays`, or *`properties`* from `objects`, into **distinct variables**.
 
 
 <!--more-->
-### Destructuring assignments :ok_hand:
+
 
 
 *`Destructuring`* is one of the most common concept you'd find looking at any React Code base. It is quite straightforward to decipher but can look daunting for beginners at first.

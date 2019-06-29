@@ -20,7 +20,7 @@
   
   
   <meta name="author" content="Ola John" />
-  <meta name="description" content="ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that here, here and here. Instead I will provide a quick overview of what they are and how to quickly get started with them.
+  <meta name="description" content="ES6 Module system 😃 ES6 modules are one of the more critically important concepts you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that here, here and here. Instead I will provide a quick overview of what they are and how to quickly get started with them.
 ">
 
   
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jolajiboye" />
     <meta name="twitter:title" content="Part 4 - ES6 Module System" />
-    <meta name="twitter:description" content="ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that here, here and here. Instead I will provide a quick overview of what they are and how to quickly get started with them.
+    <meta name="twitter:description" content="ES6 Module system 😃 ES6 modules are one of the more critically important concepts you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that here, here and here. Instead I will provide a quick overview of what they are and how to quickly get started with them.
 " />
     <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
   
@@ -175,8 +175,6 @@
       
         <li class="menu-item "><a href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
       
-        <li class="menu-item "><a href="/tags/">Tags</a></li>
-      
     </ul>
   </nav>
 
@@ -249,8 +247,6 @@
     
       <li class="sidebar-item "><a class="sidebar-link" href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
     
-      <li class="sidebar-item "><a class="sidebar-link" href="/tags/">Tags</a></li>
-    
   </ul>
 </amp-sidebar>
 
@@ -262,21 +258,21 @@
     </header>
     
 
-    <article class="post-content"><p>ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that <a href="https://exploringjs.com/es6/ch_modules.html">here</a>, <a href="https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/">here</a> and <a href="https://www.sitepoint.com/understanding-es6-modules/">here</a>. Instead I will provide a quick overview of what they are and how to quickly get started with them.</p>
+    <article class="post-content"><h3 id="es6-module-system">ES6 Module system 😃</h3>
 
-<h3 id="es6-module-system">ES6 Module system 😃</h3>
+<p>ES6 modules are one of the more critically important concepts you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that <a href="https://exploringjs.com/es6/ch_modules.html">here</a>, <a href="https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/">here</a> and <a href="https://www.sitepoint.com/understanding-es6-modules/">here</a>. Instead I will provide a quick overview of what they are and how to quickly get started with them.</p>
 
-<p>ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that <a href="https://exploringjs.com/es6/ch_modules.html">here</a>, <a href="https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/">here</a> and <a href="https://www.sitepoint.com/understanding-es6-modules/">here</a>. Instead I will provide a quick overview of what they are and how to quickly get started with them.</p>
+<p>Instead I will provide a quick overview of what they are and how to quickly get started with them.</p>
 
 <ul>
 <li><strong>What are <code>ES6 Modules</code> ?</strong></li>
 </ul>
 
 <blockquote>
-<p>The word <strong>&ldquo;modules&rdquo;</strong> refers to a small units of independent reusable code. They are foundation of many design patterns and are neccesary to build any substantially complex application.</p>
+<p>The word <strong>&ldquo;modules&rdquo;</strong> refers to a small units of independent reusable code. They are the foundation of many design patterns and are necessary to build any substantially complex application.</p>
 </blockquote>
 
-<p>Let&rsquo;s look at buiding a computer for example, it is consisted of several parts, but you could just assemble each part without worrying about the engineering complexities behind each components or having to create your own components everytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to re-invent the wheel all the time.</p>
+<p>Let&rsquo;s look at building a computer for example, it consists of several parts, but you could just assemble each part without worrying about the engineering complexities behind each component or having to create your own components everytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to reinvent the wheel all the time.</p>
 
 <ul>
 <li><strong>Creating and Exporting Modules</strong></li>
@@ -303,7 +299,7 @@
 <p>Now that we have created our module, let&rsquo;s make them accessible to other parts of our code by <strong>&ldquo;exporting&rdquo;</strong> them.</p>
 
 <ul>
-<li><strong>Each modules can be exported individually(Named Export).</strong></li>
+<li><strong>Each module can be exported individually(Named Export).</strong></li>
 </ul>
 
 <blockquote>
@@ -329,13 +325,13 @@
 </ul>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// myModules.js
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moduleConst</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;I am a module comment&#34;</span>}
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moduleConst</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;I am a module comment&#34;</span>}
 
 <span style="color:#75715e">// this function takes an array and add all the numbers
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
 
 <span style="color:#75715e">// this function takes an array finds the average
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
 }
 
 <span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">moduleConst</span>, <span style="color:#a6e22e">addNumberInArray</span>, <span style="color:#a6e22e">findArrayAverage</span> }
@@ -350,13 +346,13 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">// myModules.js
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// named export
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moduleConst</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;I am a module comment&#34;</span>}
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moduleConst</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;I am a module comment&#34;</span>}
 
 <span style="color:#75715e">// named export
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
 
 <span style="color:#75715e">// this is the default export only 1 is allowed in this file
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
 }
 </code></pre></div></p>
 </blockquote>
@@ -365,7 +361,7 @@
 <li><strong>Exporting with an alias</strong></li>
 </ul>
 
-<p>You can give the exported module an alias(like a nick name), usually because you prefer a shorter name. For example the <code>addNumberInArray</code> and <code>findArrayAverage</code> could be be exported with an alias like so:</p>
+<p>You can give the exported module an alias(like a nickname), usually because you prefer a shorter name. For example the <code>addNumberInArray</code> and <code>findArrayAverage</code> could be exported with an alias like so:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">moduleConst</span>, <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">add</span>, <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">avg</span> }
 </code></pre></div>
@@ -373,9 +369,9 @@
 <p>In summary from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">documentation</a> :</p>
 
 <blockquote>
-<p>Named exports are useful to export several values from within same file. While importing, one will simply refer to the exported value by same name.</p>
+<p>Named exports are useful to export several values from within the same file. While importing, one will simply refer to the exported value by the same name.</p>
 
-<p>Deafult export allows just a single default export per module.You can of course have several other named exports within same file. The default export is considered the <strong>main</strong> exported value. A default export can be a function, a class, an object or anything else.</p>
+<p>Default export allows just a single default export per module.You can of course have several other named exports within the same file. The default export is considered the <strong>main</strong> exported value. A default export can be a function, a class, an object or anything else.</p>
 </blockquote>
 
 <ul>
@@ -399,10 +395,10 @@ Importing from <code>myModules.js</code> will look like so:</p>
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">All</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./myModules.js&#39;</span>
 
-<span style="color:#75715e">// this allows us to have access to every memeber of the module with the dot notation.Like so:
+<span style="color:#75715e">// this allows us to have access to every member of the module with the dot notation.Like so:
 </span><span style="color:#75715e"></span>
 <span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">moduleConst</span>
-<span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">addNumberInArray</span>() <span style="color:#75715e">// since this is a fucntion we have to call it.
+<span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">addNumberInArray</span>() <span style="color:#75715e">// since this is a function we have to call it.
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">All</span>.<span style="color:#a6e22e">findArrayAverage</span>()
 </code></pre></div></p>
 </blockquote>
@@ -414,12 +410,12 @@ Importing from <code>myModules.js</code> will look like so:</p>
 <p>When you import a default export , you simply use the <code>import</code> keyword to import the module like we&rsquo;ve been doing. The only major difference is that you could call the import whatever name you wish. For example:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//  myModules.js
 </span><span style="color:#75715e"></span>
- <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moduleConst</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;I am a module comment&#34;</span>}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moduleConst</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;I am a module comment&#34;</span>}
 
- <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addNumberInArray</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);
 
 <span style="color:#75715e">// this is the default export!!!
-</span><span style="color:#75715e"></span> <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findArrayAverage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>) =&gt; <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)
 
 <span style="color:#75715e">//  app.js
 </span><span style="color:#75715e"></span>
@@ -433,7 +429,7 @@ Importing from <code>myModules.js</code> will look like so:</p>
 <li><strong>Using imported module.</strong></li>
 </ul>
 
-<p>Remember, the main puporse of a module is to have a re-usable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementation details of the code itself. Let&rsquo;s start with the simple examples from <code>myModules</code>. Let&rsquo;s assume you have to calculate the average/sum of an array many times within your code.You could simply import <code>myModules.js</code> to perform the operation.Let&rsquo;s pretend these are even more complex algorthimic compuations and you do not want to or cannot write the functions yourself. You can simply import the module and use them in your code like so:</p>
+<p>Remember, the main purpose of a module is to have a reusable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementation details of the code itself. Let&rsquo;s start with the simple examples from <code>myModules</code>. Let&rsquo;s assume you have to calculate the average/sum of an array many times within your code.You could simply import <code>myModules.js</code> to perform the operation.Let&rsquo;s pretend these are even more complex algorithmic computations and you do not want to or cannot write the functions yourself. You can simply import the module and use them in your code like so:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//app.js
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">addNumberInArray</span>, <span style="color:#a6e22e">findArrayAverage</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./myModules.js&#39;</span>
@@ -441,7 +437,7 @@ Importing from <code>myModules.js</code> will look like so:</p>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
 <span style="color:#75715e">// I need to calculate sum of an array using the addNumberInArray function from &#39;./myModules.js&#39;.
 </span><span style="color:#75715e">// Simply pass the array to the function like so:
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">addNumberInArray</span>(<span style="color:#a6e22e">array</span>) <span style="color:#75715e">//&gt; returns the sum whhich is 15
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">addNumberInArray</span>(<span style="color:#a6e22e">array</span>) <span style="color:#75715e">//&gt; returns the sum which is 15
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// I need to calculate average of an array using the findArrayAverage function from &#39;./myModules.js&#39;.
 </span><span style="color:#75715e">// Simply pass the array to the function like so:
@@ -450,7 +446,7 @@ Importing from <code>myModules.js</code> will look like so:</p>
 
 <p>Let&rsquo;s look at more interesting example from react-router-dom.</p>
 
-<p>We imported <code>React</code> from <strong><em>react</em></strong> libarary. Then imported <code>BrowserRouter</code> , <code>Route</code>, and <code>Link</code> from <code>react-router-dom</code>.</p>
+<p>We imported <code>React</code> from <strong><em>react</em></strong> library. Then imported <code>BrowserRouter</code> , <code>Route</code>, and <code>Link</code> from <code>react-router-dom</code>.</p>
 
 <blockquote>
 <p><strong>Note:</strong> <strong><em><code>BrowserRouter</code> has been imported with an alias <code>Router</code>, this is much shorter to reference throughout the code than the longer <code>BrowserRouter</code>.</em></strong></p>
@@ -461,28 +457,28 @@ Importing from <code>myModules.js</code> will look like so:</p>
 <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;  <span style="color:#75715e">// we import React from the react library
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">BrowserRouter</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">Router</span>, <span style="color:#a6e22e">Route</span>, <span style="color:#a6e22e">Link</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span> <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">modules</span> <span style="color:#a6e22e">we</span> <span style="color:#a6e22e">need</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">the</span> <span style="color:#e6db74">`react-router-dom`</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">AppRouter</span>() {
-  <span style="color:#66d9ef">return</span> (
-    &lt;<span style="color:#f92672">Router</span>&gt; <span style="color:#75715e">// we then use the imported `Router` here
-</span><span style="color:#75715e"></span>      &lt;<span style="color:#f92672">div</span>&gt;
-        &lt;<span style="color:#f92672">nav</span>&gt;
-          &lt;<span style="color:#f92672">ul</span>&gt;
-            &lt;<span style="color:#f92672">li</span>&gt;
-              &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>&gt;<span style="color:#a6e22e">Home</span>&lt;/<span style="color:#f92672">Link</span>&gt; <span style="color:#75715e">// making use of the imported `Link`
-</span><span style="color:#75715e"></span>            &lt;/<span style="color:#f92672">li</span>&gt;
-            &lt;<span style="color:#f92672">li</span>&gt;
-              &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about/&#34;</span>&gt;<span style="color:#a6e22e">About</span>&lt;/<span style="color:#f92672">Link</span>&gt;
-            &lt;/<span style="color:#f92672">li</span>&gt;
-            &lt;<span style="color:#f92672">li</span>&gt;
-              &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users/&#34;</span>&gt;<span style="color:#a6e22e">Users</span>&lt;/<span style="color:#f92672">Link</span>&gt;
-            &lt;/<span style="color:#f92672">li</span>&gt;
-          &lt;/<span style="color:#f92672">ul</span>&gt;
-        &lt;/<span style="color:#f92672">nav</span>&gt;
-        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">exact</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{Index}</span> /&gt;  <span style="color:#75715e">//making use of the imported `Link`
-</span><span style="color:#75715e"></span>        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{About}</span> /&gt;
-        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{Users}</span> /&gt;
-      &lt;/<span style="color:#f92672">div</span>&gt;
-    &lt;/<span style="color:#f92672">Router</span>&gt;
-  );
+ <span style="color:#66d9ef">return</span> (
+   &lt;<span style="color:#f92672">Router</span>&gt; <span style="color:#75715e">// we then use the imported `Router` here
+</span><span style="color:#75715e"></span>     &lt;<span style="color:#f92672">div</span>&gt;
+       &lt;<span style="color:#f92672">nav</span>&gt;
+         &lt;<span style="color:#f92672">ul</span>&gt;
+           &lt;<span style="color:#f92672">li</span>&gt;
+             &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>&gt;<span style="color:#a6e22e">Home</span>&lt;/<span style="color:#f92672">Link</span>&gt; <span style="color:#75715e">// making use of the imported `Link`
+</span><span style="color:#75715e"></span>           &lt;/<span style="color:#f92672">li</span>&gt;
+           &lt;<span style="color:#f92672">li</span>&gt;
+             &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about/&#34;</span>&gt;<span style="color:#a6e22e">About</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+           &lt;/<span style="color:#f92672">li</span>&gt;
+           &lt;<span style="color:#f92672">li</span>&gt;
+             &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users/&#34;</span>&gt;<span style="color:#a6e22e">Users</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+           &lt;/<span style="color:#f92672">li</span>&gt;
+         &lt;/<span style="color:#f92672">ul</span>&gt;
+       &lt;/<span style="color:#f92672">nav</span>&gt;
+       &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">exact</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{Index}</span> /&gt;  <span style="color:#75715e">//making use of the imported `Link`
+</span><span style="color:#75715e"></span>       &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{About}</span> /&gt;
+       &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span><span style="color:#e6db74">{Users}</span> /&gt;
+     &lt;/<span style="color:#f92672">div</span>&gt;
+   &lt;/<span style="color:#f92672">Router</span>&gt;
+ );
 }
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">AppRouter</span>;</code></pre></div></article>
     <footer class="post-footer">
@@ -494,6 +490,8 @@ Importing from <code>myModules.js</code> will look like so:</p>
           <li class="post-tag"><a href="/tags/beginner"><span class="tag">Beginner</span></a></li>
         
           <li class="post-tag"><a href="/tags/coding"><span class="tag">Coding</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/javascript"><span class="tag">Javascript</span></a></li>
         
       </ul>
       

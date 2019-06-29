@@ -20,16 +20,16 @@
   
   
   <meta name="author" content="Ola John Ajiboye" />
-  <meta name="description" content="Varibale declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
- One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React.">
+  <meta name="description" content="Variable declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
+ One of the more confusing part of learning a Javascript framework is that everything looks like magic at first. Especially when your knowledge of modern Javascript is not up to date. You are unsure which part of the code is some abracadabra or just plain ES6 Javascript.">
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jolajiboye" />
     <meta name="twitter:title" content="The 20% Of ES6 you end up using 80% of the time - Let &amp; Const." />
-    <meta name="twitter:description" content="Varibale declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
- One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first. You are unsure which part of the code is some abracadabra or just plain Javascript.At least this was my feeling when I started learning React." />
+    <meta name="twitter:description" content="Variable declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
+ One of the more confusing part of learning a Javascript framework is that everything looks like magic at first. Especially when your knowledge of modern Javascript is not up to date. You are unsure which part of the code is some abracadabra or just plain ES6 Javascript." />
     <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
   
 
@@ -175,8 +175,6 @@
       
         <li class="menu-item "><a href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
       
-        <li class="menu-item "><a href="/tags/">Tags</a></li>
-      
     </ul>
   </nav>
 
@@ -249,8 +247,6 @@
     
       <li class="sidebar-item "><a class="sidebar-link" href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
     
-      <li class="sidebar-item "><a class="sidebar-link" href="/tags/">Tags</a></li>
-    
   </ul>
 </amp-sidebar>
 
@@ -264,37 +260,56 @@
 
     <article class="post-content">
 
-<h2 id="varibale-declaration-with-let-const">Varibale declaration with let &amp; const</h2>
+<h2 id="variable-declaration-with-let-const">Variable declaration with let &amp; const</h2>
 
 <blockquote>
 <p>This is the first part in the series. I will be covering the other sections in part 2.</p>
 </blockquote>
 
-<p>One of the more confusing part of learning a Javasript framework as a newbie is that everything looks like magic at first.
-You are unsure which part of the code is some <strong><em>abracadabra</em></strong> or just plain Javascript.At least this was my feeling when I started learning React.You get caught thinking what the hell is this <code>bind(this)</code> everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&hellip;oh that was <code>destructuring</code>!.</p>
+<p>One of the more confusing part of learning a Javascript framework is that everything looks like magic at first. Especially when your knowledge of modern Javascript is not up to date.
+You are unsure which part of the code is some <strong><code>abracadabra</code></strong> or just plain ES6 Javascript. At least this was my feeling when I started learning React,or even Angular(although that was Typescript).You get caught thinking what the hell is this <em><code>bind(this)</code></em> everywhere and why, what of those weird looking syntaxes and these funny variable assignments too&hellip;oh that was <code>destructuring</code>!.</p>
 
-<p>This is an attempt to layout some ES6 concepts I which I knew throughly before delving into React or any modern Javascrpt software for that matter.These fundamentals will make you a more productive modern Javascript developer quickly regardless of framework.</p>
+<p><br>
+<div style="margin:10px; padding:0 65px">
+<amp-img
+  src="/img/es6/inline/confused.gif"
+  alt="confused "
+  
+  
+  width="205px"
+  height="70px"
+  layout="responsive">
+</amp-img>
 
-<p>We&rsquo;ll be taking a dive at the underlisted ES6 concepts.These I believe are essential to getting a quick grasp of React in particular much faster. Some are more simpler that the other and you&rsquo;ll probably know them already.But, I guess it&rsquo;s fine to go over them nonetheless.</p>
+</div>
+<br> <br> <br></p>
+
+<p>This series is an attempt to layout some ES6 concepts I which I knew thoroughly before delving into React or any modern Javascript software for that matter.These fundamentals will make you a more productive modern Javascript developer quickly regardless of framework.</p>
+
+<p>This series is geared towards  beginners who already have some Javascript knowledge.</p>
+
+<p>We&rsquo;ll be taking a dive at the underlisted ES6 concepts.These I believe are essential to getting a quick grasp of React in particular much faster. Some are more simpler that the other and you&rsquo;ll probably know them already. But, I guess it&rsquo;s fine to go over them nonetheless.</p>
+
+<p>I have divided the series into two sections. This is the first section consisting of 5 parts</p>
 
 <blockquote>
-<p>You can skip to any section of the series by clicking on them. These are the first half.</p>
+<p>You can skip to any topic by clicking on them below :</p>
 </blockquote>
 
 <ul>
+<li><a href="https://olajohn.me/post/es6-ternary-operators/">Ternary Operators</a></li>
 <li><a href="https://olajohn.me/post/es6-template-literals/">Template literals (Template strings)</a></li>
-<li><a href="https://olajohn.me/post/es6-ternary-operators/">Ternary Opearors</a></li>
 <li><a href="https://olajohn.me/post/es6-module-system/">ES6 Module system</a></li>
 <li><a href="https://olajohn.me/post/es6-destructuring/">Destructuring assignments</a></li>
 </ul>
 
-<h3 id="variable-declaration-with-let-const">Variable declaration with let/const 😍</h3>
+<h3 id="variable-declaration-with-let-const-1">Variable declaration with let/const 😍</h3>
 
-<p>Before ES6 <code>var</code> was the defacto keyword for declaring variables. With ES6, two new keywords <code>let</code> and <code>const</code> were introduced for variable declarations. But what are the differences and why bother with them anyways?
-There are couple of gotchas with declaring variables with the <code>var</code> keyword. <code>Scope</code> and <code>hositing</code> were cheif amongst the issue with <code>var</code>. But what does these 2 even mean.</p>
+<p>Before ES6 <code>var</code> was the de facto keyword for declaring variables. With ES6, two new keywords <em><code>let</code></em> and <em><code>const</code></em> were introduced for variable declarations. But what are the differences and why bother with them anyways?
+There are a couple of gotchas with declaring variables with the <em><code>var</code></em> keyword. <em><code>Scope</code></em> and <em><code>hoisting</code></em> were chief amongst the issue with <strong><code>var</code></strong>. But what does these 2 even mean?</p>
 
 <blockquote>
-<p>The <strong><em>scope</em></strong> of <code>var</code> is the entire function block in which it is defined.It is also available globally when declared outside a function. <code>let</code> on the other hand is limited to the block scope in which it was defined.</p>
+<p>The <strong><em>scope</em></strong> of <em><code>var</code></em> is the entire function block in which it is defined.It is also available globally when declared outside a function. <em><code>let</code></em> on the other hand is limited to the block scope in which it was defined.</p>
 </blockquote>
 
 <ul>
@@ -307,7 +322,7 @@ There are couple of gotchas with declaring variables with the <code>var</code> k
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testOfVar</span>) <span style="color:#75715e">// Outputs I am &#39;var&#39;
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testOfLet</span>) <span style="color:#75715e">// Outputs undefined
 </span></code></pre></div>
-As you would see the variable declared with <code>let</code> is not attached to the global object and therefore not accesible globally.On the otherhand <code>var</code> declared variable is accessible globally and therefore can be accidentally altered anywhere within the program.This is really bad and can be cause of debugging frustrations.Hence, it is recommended to use <code>let</code> instead of <code>var</code> almsot always.</p>
+As you would see the variable declared with <code>let</code> is not attached to the global object and therefore not accessible globally.On the other hand <code>var</code> declared variable is accessible globally and therefore can be accidentally altered anywhere within the program.This is really bad and can be cause of debugging frustrations.Hence, it is recommended to use <code>let</code> instead of <code>var</code> almost always.</p>
 
 <ul>
 <li><strong>Scope 😏</strong></li>
@@ -317,32 +332,32 @@ As you would see the variable declared with <code>let</code> is not attached to 
 <p>The <strong><code>let</code></strong> statement declares a block scope local variable, optionally initializing it to a value.</p>
 </blockquote>
 
-<p>In simple english, variables declared with <code>let</code> has a limited scope within the <code>block</code> it is declared. You can intilaize the variable or not. But wait, what is a <code>block scope</code> ?,A <strong>block scope</strong> is the area within <code>if</code>, <code>switch</code> conditions or <code>for</code> and <code>while</code> loops. Generally speaking, whenever you see <code>{...expression}</code>, this is a block. Unlike <code>var</code> where the variable is hoisted to the top of the function regardless of the <strong>block</strong> scope. Hence:</p>
+<p>In simple english, variables declared with <code>let</code> has a limited scope within the <code>block</code> it is declared. You can initialize the variable optionally if you desire. But wait, what is a <em><code>block scope</code></em> ?,A <strong>block scope</strong> is the area within <code>if</code>, <code>switch</code> conditions or <code>for</code> and <code>while</code> loops. Generally speaking, whenever you see <code>{...expression}</code>, this is a block. Unlike <code>var</code> where the variable is hoisted to the top of the function regardless of the <strong>block</strong> scope. Hence:</p>
 
-<p><strong>var</strong> decalred variable is accessible throughout the entire function scope and can be modified.Why is this such a big deal you ask?, Some code snippets to the rescue below:</p>
+<p><strong>var</strong> declared variable is accessible throughout the entire function scope and can be modified.Why is this such a big deal you ask?, Some code snippets to the rescue below:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfVar</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span> <span style="color:#75715e">// this will later be modified within the if block.
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span>
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// this is same variable as the first &#39;myName&#39;
-</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// scope is ignored.Modifies the variable and hoist it to top of function.
-</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// Outputs &#39;Joshua&#39;
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// myName has been modified within the if block.
-</span><span style="color:#75715e"></span>                     <span style="color:#75715e">// Every reference of myName within this function block now reffers to &#34;Joshua&#34;
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span> <span style="color:#75715e">// this will later be modified within the if block.
+</span><span style="color:#75715e"></span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span>
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// this is same variable as the first &#39;myName&#39;
+</span><span style="color:#75715e"></span>                       <span style="color:#75715e">// scope is ignored.Modifies the variable and hoist it to top of function.
+</span><span style="color:#75715e"></span>                       <span style="color:#75715e">// Outputs &#39;Joshua&#39;
+</span><span style="color:#75715e"></span> }
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// myName has been modified within the if block.
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">// Every reference of myName within this function block now refers to &#34;Joshua&#34;
 </span><span style="color:#75715e"></span>}
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfLet</span>() {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span> <span style="color:#75715e">// this will not be modified
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span>
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// this is treated as another variable. The scope is limited to this if block.
-</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// scope is respected, this variable will not modify anyting outside this block
-</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// Outputs &#39;Joshua&#39;
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// myName declared at the top of the function is modified from the if block.
-</span><span style="color:#75715e"></span>                      <span style="color:#75715e">// Output &#39;John&#39;
+ <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span> <span style="color:#75715e">// this will not be modified
+</span><span style="color:#75715e"></span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span>
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// this is treated as another variable. The scope is limited to this if block.
+</span><span style="color:#75715e"></span>                       <span style="color:#75715e">// scope is respected, this variable will not modify anything outside this block
+</span><span style="color:#75715e"></span>                       <span style="color:#75715e">// Outputs &#39;Joshua&#39;
+</span><span style="color:#75715e"></span> }
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// myName declared at the top of the function is modified from the if block.
+</span><span style="color:#75715e"></span>                     <span style="color:#75715e">// Output &#39;John&#39;
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
@@ -350,18 +365,18 @@ As you would see the variable declared with <code>let</code> is not attached to 
 <li><strong>Re-Declaration 🙈</strong></li>
 </ul>
 
-<p>With <code>var</code> it was possible to re-declare a variable which isn&rsquo;t a good thing.You could easily re-declare a variable that has already been declared and assign a different value to it. It will introduce a bug without you noticing. <code>Let</code> throws an error when you try to re-declare a varibale within same scope. Example below:</p>
+<p>With <code>var</code> it was possible to re-declare a variable which isn&rsquo;t a good thing.You could easily re-declare a variable that has already been declared and assign a different value to it. It will introduce a bug without you noticing. <code>Let</code> throws an error when you try to re-declare a variable within the same scope. Example below:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfVar</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">// this doesn&#39;t even make sense, but var makes it possible.
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>)  <span style="color:#75715e">// Outputs &#39;Joshua&#39;
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+ <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">// this doesn&#39;t even make sense, but var makes it possible.
+</span><span style="color:#75715e"></span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>)  <span style="color:#75715e">// Outputs &#39;Joshua&#39;
 </span><span style="color:#75715e"></span>}
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testOfLet</span>() {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">//
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// SyntaxError &#39;myName&#39; is already been declared
+ <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+ <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Joshua&#34;</span> <span style="color:#75715e">//
+</span><span style="color:#75715e"></span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>) <span style="color:#75715e">// SyntaxError &#39;myName&#39; is already been declared
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
@@ -371,33 +386,46 @@ As you would see the variable declared with <code>let</code> is not attached to 
 
 <p><strong>What about <code>const</code>? 😄</strong></p>
 
-<p><code>const</code> is quite similar to <code>let</code>. The major difference is that <code>const</code> can not be re-assigned.Do not confuse re-assigning with re-declaring. In most cases you&rsquo;d want to declare a variable and make some re-assignments depending on certain conditions. Let&rsquo;s look at an example:
+<p><em><code>const</code></em> is quite similar to <em><code>let</code></em>. The major difference is that <em><code>const</code></em> can not be re-assigned.Do not confuse re-assigning with re-declaring. In most cases you&rsquo;d want to declare a variable and make some re-assignments depending on certain conditions. Let&rsquo;s look at an example:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">constTest</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) {
-    <span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; years old&#34;</span> <span style="color:#75715e">// TypeError: Assignment to constant variable
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ageDeclaration</span>
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+ <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) {
+   <span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; years old&#34;</span> <span style="color:#75715e">// TypeError: Assignment to constant variable
+</span><span style="color:#75715e"></span> }
+ <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ageDeclaration</span>
 }
 
 <span style="color:#75715e">// But this is possible
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">constModifier</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myProfile</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#a6e22e">ageDeclaration</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34; &#34;</span> }
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">myProfile</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) {
-    <span style="color:#a6e22e">myProfile</span>.<span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">myProfile</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; years old&#34;</span> <span style="color:#75715e">// the ageDeclaration property of my profile can be re-assigned
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">myProfile</span> <span style="color:#75715e">// returns { age: 20, name: &#39;John&#39;, ageDeclaration: &#39;I am 20 years old&#39; }
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myProfile</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#a6e22e">ageDeclaration</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34; &#34;</span> }
+ <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">myProfile</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) {
+   <span style="color:#a6e22e">myProfile</span>.<span style="color:#a6e22e">ageDeclaration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">myProfile</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; years old&#34;</span> <span style="color:#75715e">// the ageDeclaration property of my profile can be re-assigned
+</span><span style="color:#75715e"></span> }
+ <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">myProfile</span> <span style="color:#75715e">// returns { age: 20, name: &#39;John&#39;, ageDeclaration: &#39;I am 20 years old&#39; }
 </span><span style="color:#75715e"></span>}
 </code></pre></div></p>
 
-<p>In the example above we have declared <code>ageDeclaration</code> with an empty string. Within the <code>if</code> block we are re-assigning it to keep track of the <code>age</code> variable. Note when we re-assigned the <code>ageDeclaration</code> within the <code>if</code> block, we did so without using the <code>let</code> statement. This is the basic difference between re-declaration and re-assigning.Almost always, what we intend to do is to re-assign a variable not re-declare it. However, with <code>const</code> you can neither re-declare or re-assign.Although, it is possible to change the properties of the variable decalred with <code>const</code>.</p>
+<p>In the example above we have declared <code>ageDeclaration</code> with an empty string. Within the <code>if</code> block we are re-assigning it to keep track of the <code>age</code> variable. Note when we re-assigned the <code>ageDeclaration</code> within the <code>if</code> block, we did so without using the <code>let</code> statement. This is the basic difference between re-declaration and re-assigning.Almost always, what we intend to do is to re-assign a variable not re-declare it. However, with <code>const</code> you can neither re-declare or re-assign.Although, it is possible to change the properties of the variable declared with <code>const</code>.</p>
 
 <blockquote>
 <p><em>Use <code>const</code> when you are sure there is no intention to re-assign the variable. However, you can still use <code>const</code> for objects,arrays,classes etc where some of the properties/members has to be re-assigned/modified. Refer to code example above!</em></p>
 </blockquote>
 
-<p><strong>Coming up next in Part 2! : Not availabe yet</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YN3sULAn2SA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>Next Up in Section 1</strong></p>
+
+<ul>
+<li><a href="https://olajohn.me/post/es6-ternary-operators/">Ternary Operators</a></li>
+<li><a href="https://olajohn.me/post/es6-template-literals/">Template literals (Template strings)</a></li>
+<li><a href="https://olajohn.me/post/es6-module-system/">ES6 Module system</a></li>
+<li><a href="https://olajohn.me/post/es6-destructuring/">Destructuring assignments</a></li>
+</ul>
+
+<blockquote>
+<p><em>Coming up next in section 2! : Not available yet</em></p>
+</blockquote>
 
 <ul>
 <li><a href="#high-order-functions">High-order Functions</a></li>

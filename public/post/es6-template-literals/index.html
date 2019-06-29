@@ -20,7 +20,7 @@
   
   
   <meta name="author" content="Author Name" />
-  <meta name="description" content="String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.
+  <meta name="description" content="Template literals (Template strings) 💪 String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using backticks.
 ">
 
   
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jolajiboye" />
     <meta name="twitter:title" content="Part 3 - ES6 Template Literals" />
-    <meta name="twitter:description" content="String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.
+    <meta name="twitter:description" content="Template literals (Template strings) 💪 String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using backticks.
 " />
     <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
   
@@ -175,8 +175,6 @@
       
         <li class="menu-item "><a href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
       
-        <li class="menu-item "><a href="/tags/">Tags</a></li>
-      
     </ul>
   </nav>
 
@@ -249,8 +247,6 @@
     
       <li class="sidebar-item "><a class="sidebar-link" href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
     
-      <li class="sidebar-item "><a class="sidebar-link" href="/tags/">Tags</a></li>
-    
   </ul>
 </amp-sidebar>
 
@@ -262,9 +258,9 @@
     </header>
     
 
-    <article class="post-content"><p>String interpolation and multi-line strings are probably most of the template strings concepts you&rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.</p>
+    <article class="post-content"><h3 id="template-literals-template-strings">Template literals (Template strings) 💪</h3>
 
-<h3 id="template-literals-template-strings">Template literals (Template strings) 💪</h3>
+<p>String interpolation and multi-line strings are probably most of the template strings concepts you&rsquo;ll encounter working with modern Javascript.Template strings are declared using backticks.</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//ES5
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">exampleString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am an ES5 String&#34;</span> <span style="color:#75715e">// or  exampleString = &#39;I am a String&#39;
@@ -296,30 +292,30 @@
 <p>Template literals provide an easy way to interpolate expressions into strings. You do so by using the ${&hellip;} syntax:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//ES5
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">es5String</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;20&#34;</span>
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">country</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nigerian&#34;</span>
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">introdcution</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;My name is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; I am a &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;year old &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">country</span>
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">introdcution</span>)
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>
+ <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;20&#34;</span>
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">country</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nigerian&#34;</span>
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">introduction</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;My name is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; I am a &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;year old &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">country</span>
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">introduction</span>)
 }
 
 <span style="color:#75715e">//ES6
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">es6String</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`John`</span>
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">country</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Nigerian`</span>
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">introdcution</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`My name is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> I am a </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74">old </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">country</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. I will be </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> years old in 5 years`</span>
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">introdcution</span>)
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`John`</span>
+ <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">country</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Nigerian`</span>
+ <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">introduction</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`My name is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> I am a </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74">old </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">country</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. I will be </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> years old in 5 years`</span>
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">introduction</span>)
 }
 </code></pre></div></p>
 
 <p><em>Template strings are commonly used with styled-components library in React</em>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//Styled-Component exmaple
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#75715e">//Styled-Component example
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fontSize</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calculateFontSize</span>();
 <span style="color:#a6e22e">RedCenteredText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">styled</span>.<span style="color:#a6e22e">h1</span><span style="color:#e6db74">`
-</span><span style="color:#e6db74">	color: red;
-</span><span style="color:#e6db74">	text-align: &#39;center;
-</span><span style="color:#e6db74">	font-size: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fontSize</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+</span><span style="color:#e6db74">  color: red;
+</span><span style="color:#e6db74">  text-align: &#39;center;
+</span><span style="color:#e6db74">  font-size: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fontSize</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
 </code></pre></div></p>
 </blockquote></article>
     <footer class="post-footer">
@@ -328,9 +324,11 @@
         
           <li class="post-tag"><a href="/tags/strings"><span class="tag">Strings</span></a></li>
         
-          <li class="post-tag"><a href="/tags/es6"><span class="tag">Es6</span></a></li>
+          <li class="post-tag"><a href="/tags/es6"><span class="tag">ES6</span></a></li>
         
           <li class="post-tag"><a href="/tags/coding"><span class="tag">Coding</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/javascript"><span class="tag">Javascript</span></a></li>
         
       </ul>
       

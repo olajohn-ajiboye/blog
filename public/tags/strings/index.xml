@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>strings on Ola John </title>
+    <title>Strings on Ola John </title>
     <link>http://olajohn.me/tags/strings/</link>
-    <description>Recent content in strings on Ola John </description>
+    <description>Recent content in Strings on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jun 2019 21:58:53 +0300</lastBuildDate>
@@ -17,7 +17,9 @@
       <pubDate>Thu, 06 Jun 2019 21:58:53 +0300</pubDate>
       
       <guid>http://olajohn.me/post/es6-template-literals/</guid>
-      <description>&lt;p&gt;String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using the back ticks.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;template-literals-template-strings&#34;&gt;Template literals (Template strings) 💪&lt;/h3&gt;
+
+&lt;p&gt;String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using backticks.&lt;/p&gt;</description>
     </item>
     
   </channel>

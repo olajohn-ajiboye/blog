@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hooks on Ola John </title>
+    <link>http://olajohn.me/tags/hooks/</link>
+    <description>Recent content in Hooks on Ola John </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Jun 2019 21:37:30 +0300</lastBuildDate>
+    
+	<atom:link href="http://olajohn.me/tags/hooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learn React Hooks by Building a Recipe Search App</title>
+      <link>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</link>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</guid>
+      <description>&lt;p&gt;This is a beginner tutorial in understanding &lt;code&gt;React Hooks&lt;/code&gt;  and the &lt;code&gt;Context API&lt;/code&gt;. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

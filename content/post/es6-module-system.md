@@ -1,24 +1,24 @@
 ---
 title: "Part 4 - ES6 Module System"
 author: "Ola John"
-tags: ["ES6", "beginner", "coding"]
+tags: ["ES6", "Beginner", "Coding", "Javascript"]
 date: 2019-06-06T21:59:11+03:00
 draft: false
 ---
+### ES6 Module system :smiley:
 
-ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that [here](https://exploringjs.com/es6/ch_modules.html), [here](https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/) and [here](https://www.sitepoint.com/understanding-es6-modules/). Instead I will provide a quick overview of what they are and how to quickly get started with them.
+ES6 modules are one of the more critically important concepts you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that [here](https://exploringjs.com/es6/ch_modules.html), [here](https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/) and [here](https://www.sitepoint.com/understanding-es6-modules/). Instead I will provide a quick overview of what they are and how to quickly get started with them.
 
 <!--more-->
 
-### ES6 Module system :smiley:
 
-ES6 modules are one of the more critically important concept you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that [here](https://exploringjs.com/es6/ch_modules.html), [here](https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/) and [here](https://www.sitepoint.com/understanding-es6-modules/). Instead I will provide a quick overview of what they are and how to quickly get started with them.
+ Instead I will provide a quick overview of what they are and how to quickly get started with them.
 
 * **What are ``ES6 Modules`` ?**
 
-> The word **"modules"** refers to a small units of independent reusable code. They are foundation of many design patterns and are neccesary to build any substantially complex application.
+> The word **"modules"** refers to a small units of independent reusable code. They are the foundation of many design patterns and are necessary to build any substantially complex application.
 
-Let's look at buiding a computer for example, it is consisted of several parts, but you could just assemble each part without worrying about the engineering complexities behind each components or having to create your own components everytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to re-invent the wheel all the time.
+Let's look at building a computer for example, it consists of several parts, but you could just assemble each part without worrying about the engineering complexities behind each component or having to create your own components everytime. As Software Engineers we usually have to re-use codes either written by others or by ourselves without having to reinvent the wheel all the time.
 
 * **Creating and Exporting Modules**
 
@@ -41,7 +41,7 @@ const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 
 Now that we have created our module, let's make them accessible to other parts of our code by **"exporting"** them.
 
-* **Each modules can be exported individually(Named Export).**
+* **Each module can be exported individually(Named Export).**
 
 > *With named exports, one can have multiple named exports per file. Then import the specific modules surrounded in braces. The name of imported module has to be the same as the name of the exported module.*
 {{< highlight jsm "linenostart=1" >}}
@@ -64,13 +64,13 @@ But that looks cumbersome and repetitive. Is there a better way?, Sure!
 
 {{< highlight jsm "linenostart=1" >}}
 // myModules.js
- const moduleConst = {title: "I am a module comment"}
+const moduleConst = {title: "I am a module comment"}
 
 // this function takes an array and add all the numbers
- const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+const addNumberInArray = (array) => array.reduce((a, b) => a + b);
 
 // this function takes an array finds the average
- const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 }
 
 export {moduleConst, addNumberInArray, findArrayAverage }
@@ -83,13 +83,13 @@ export {moduleConst, addNumberInArray, findArrayAverage }
 // myModules.js
 
 // named export
- export const moduleConst = {title: "I am a module comment"}
+export const moduleConst = {title: "I am a module comment"}
 
 // named export
- export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
 
 // this is the default export only 1 is allowed in this file
- export default const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+export default const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 }
 {{< /highlight >}}
 
@@ -97,7 +97,7 @@ export {moduleConst, addNumberInArray, findArrayAverage }
 
 * **Exporting with an alias**
 
-You can give the exported module an alias(like a nick name), usually because you prefer a shorter name. For example the `addNumberInArray` and `findArrayAverage` could be be exported with an alias like so:
+You can give the exported module an alias(like a nickname), usually because you prefer a shorter name. For example the `addNumberInArray` and `findArrayAverage` could be exported with an alias like so:
 
 {{< highlight jsm "linenostart=1" >}}
 export {moduleConst, addNumberInArray as add, findArrayAverage as avg }
@@ -105,9 +105,9 @@ export {moduleConst, addNumberInArray as add, findArrayAverage as avg }
 
 In summary from [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) :
 
-> Named exports are useful to export several values from within same file. While importing, one will simply refer to the exported value by same name.
+> Named exports are useful to export several values from within the same file. While importing, one will simply refer to the exported value by the same name.
 
-> Deafult export allows just a single default export per module.You can of course have several other named exports within same file. The default export is considered the **main** exported value. A default export can be a function, a class, an object or anything else.
+> Default export allows just a single default export per module.You can of course have several other named exports within the same file. The default export is considered the **main** exported value. A default export can be a function, a class, an object or anything else.
 
 
 
@@ -126,16 +126,16 @@ import {moduleConst, addNumberInArray as add, findArrayAverage as avg } from './
 
 {{< /highlight >}}
 
- > You can import everything that is exported from a module like this:
+> You can import everything that is exported from a module like this:
 {{< highlight jsm "linenostart=1" >}}
 //app.js
 
 import * as All from './myModules.js'
 
-// this allows us to have access to every memeber of the module with the dot notation.Like so:
+// this allows us to have access to every member of the module with the dot notation.Like so:
 
 All.moduleConst
-All.addNumberInArray() // since this is a fucntion we have to call it.
+All.addNumberInArray() // since this is a function we have to call it.
 All.findArrayAverage()
 
 {{< /highlight >}}
@@ -146,12 +146,12 @@ When you import a default export , you simply use the ``import`` keyword to impo
 {{< highlight jsm "linenostart=1" >}}
 //  myModules.js
 
- export const moduleConst = {title: "I am a module comment"}
+export const moduleConst = {title: "I am a module comment"}
 
- export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
+export const addNumberInArray = (array) => array.reduce((a, b) => a + b);
 
 // this is the default export!!!
- export default const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
+export default const findArrayAverage = (array) => array.reduce((a, b) => a + b / array.length)
 
 //  app.js
 
@@ -165,7 +165,7 @@ import findArrayAverage from './myModules.js'
 
 * **Using imported module.**
 
-Remember, the main puporse of a module is to have a re-usable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementation details of the code itself. Let's start with the simple examples from `myModules`. Let's assume you have to calculate the average/sum of an array many times within your code.You could simply import ``myModules.js`` to perform the operation.Let's pretend these are even more complex algorthimic compuations and you do not want to or cannot write the functions yourself. You can simply import the module and use them in your code like so:
+Remember, the main purpose of a module is to have a reusable piece of code.The piece of code exposes an API to us that we can then use without having to ever understand the implementation details of the code itself. Let's start with the simple examples from `myModules`. Let's assume you have to calculate the average/sum of an array many times within your code.You could simply import ``myModules.js`` to perform the operation.Let's pretend these are even more complex algorithmic computations and you do not want to or cannot write the functions yourself. You can simply import the module and use them in your code like so:
 
 {{< highlight jsm "linenostart=1" >}}
 //app.js
@@ -174,7 +174,7 @@ import {addNumberInArray, findArrayAverage } from './myModules.js'
 const array = [1,2,3,4,5]
 // I need to calculate sum of an array using the addNumberInArray function from './myModules.js'.
 // Simply pass the array to the function like so:
-addNumberInArray(array) //> returns the sum whhich is 15
+addNumberInArray(array) //> returns the sum which is 15
 
 // I need to calculate average of an array using the findArrayAverage function from './myModules.js'.
 // Simply pass the array to the function like so:
@@ -183,7 +183,7 @@ findArrayAverage(array) //> returns the sum which is 3.8
 
 Let's look at more interesting example from react-router-dom.
 
-We imported `React` from ***react*** libarary. Then imported `BrowserRouter` , `Route`, and `Link` from `react-router-dom`.
+We imported `React` from ***react*** library. Then imported `BrowserRouter` , `Route`, and `Link` from `react-router-dom`.
 
 > **Note:** ***`BrowserRouter` has been imported with an alias `Router`, this is much shorter to reference throughout the code than the longer `BrowserRouter`.***
 
@@ -193,29 +193,32 @@ We imported `React` from ***react*** libarary. Then imported `BrowserRouter` , `
 import React from "react";  // we import React from the react library
 import { BrowserRouter as Router, Route, Link } from "react-router-dom" import the modules we need from the `react-router-dom`
 function AppRouter() {
-  return (
-    <Router> // we then use the imported `Router` here
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link> // making use of the imported `Link`
-            </li>
-            <li>
-              <Link to="/about/">About</Link>
-            </li>
-            <li>
-              <Link to="/users/">Users</Link>
-            </li>
-          </ul>
-        </nav>
-        <Route path="/" exact component={Index} />  //making use of the imported `Link`
-        <Route path="/about/" component={About} />
-        <Route path="/users/" component={Users} />
-      </div>
-    </Router>
-  );
+ return (
+   <Router> // we then use the imported `Router` here
+     <div>
+       <nav>
+         <ul>
+           <li>
+             <Link to="/">Home</Link> // making use of the imported `Link`
+           </li>
+           <li>
+             <Link to="/about/">About</Link>
+           </li>
+           <li>
+             <Link to="/users/">Users</Link>
+           </li>
+         </ul>
+       </nav>
+       <Route path="/" exact component={Index} />  //making use of the imported `Link`
+       <Route path="/about/" component={About} />
+       <Route path="/users/" component={Users} />
+     </div>
+   </Router>
+ );
 }
 export default AppRouter;
 
 {{< /highlight >}}
+
+
+

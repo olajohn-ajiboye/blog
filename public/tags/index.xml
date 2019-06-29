@@ -6,51 +6,51 @@
     <description>Recent content in Tags on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jun 2019 21:59:33 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2019 21:37:30 +0300</lastBuildDate>
     
 	<atom:link href="http://olajohn.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>beginner</title>
+      <title>Beginner</title>
       <link>http://olajohn.me/tags/beginner/</link>
-      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
       
       <guid>http://olajohn.me/tags/beginner/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>coding</title>
-      <link>http://olajohn.me/tags/coding/</link>
-      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
-      
-      <guid>http://olajohn.me/tags/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>es6</title>
+      <title>ES6</title>
       <link>http://olajohn.me/tags/es6/</link>
-      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
       
       <guid>http://olajohn.me/tags/es6/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>strings</title>
-      <link>http://olajohn.me/tags/strings/</link>
-      <pubDate>Thu, 06 Jun 2019 21:58:53 +0300</pubDate>
+      <title>Hooks</title>
+      <link>http://olajohn.me/tags/hooks/</link>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
       
-      <guid>http://olajohn.me/tags/strings/</guid>
+      <guid>http://olajohn.me/tags/hooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://olajohn.me/tags/react/</link>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
+      
+      <guid>http://olajohn.me/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Destructuring</title>
       <link>http://olajohn.me/tags/destructuring/</link>
-      <pubDate>Thu, 06 Jun 2019 21:58:34 +0300</pubDate>
+      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
       
       <guid>http://olajohn.me/tags/destructuring/</guid>
       <description></description>
@@ -59,18 +59,27 @@
     <item>
       <title>Javascript</title>
       <link>http://olajohn.me/tags/javascript/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
+      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
       
       <guid>http://olajohn.me/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>React</title>
-      <link>http://olajohn.me/tags/react/</link>
-      <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
+      <title>Coding</title>
+      <link>http://olajohn.me/tags/coding/</link>
+      <pubDate>Thu, 06 Jun 2019 21:59:11 +0300</pubDate>
       
-      <guid>http://olajohn.me/tags/react/</guid>
+      <guid>http://olajohn.me/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Strings</title>
+      <link>http://olajohn.me/tags/strings/</link>
+      <pubDate>Thu, 06 Jun 2019 21:58:53 +0300</pubDate>
+      
+      <guid>http://olajohn.me/tags/strings/</guid>
       <description></description>
     </item>
     
