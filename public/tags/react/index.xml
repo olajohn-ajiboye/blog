@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on Ola John</title>
+    <title>React on Ola John </title>
     <link>http://olajohn.me/tags/react/</link>
-    <description>Recent content in React on Ola John</description>
+    <description>Recent content in React on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2019 23:27:34 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 13:45:08 +0300</lastBuildDate>
     
 	<atom:link href="http://olajohn.me/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Most of the Es6 You Need have a Smoother Start With React</title>
+      <title>Learn React Hook and Context Api Part(2)</title>
+      <link>http://olajohn.me/post/react-hook-and-context-api-part2/</link>
+      <pubDate>Thu, 04 Jul 2019 13:45:08 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/react-hook-and-context-api-part2/</guid>
+      <description>&lt;p&gt;This is the second part of the series in learning &lt;strong&gt;React Hooks&lt;/strong&gt; and the &lt;strong&gt;Context API&lt;/strong&gt;. In the  &lt;a href=&#34;https://dev.to/mongopark/let-s-learn-react-hooks-and-context-api-by-building-a-recipe-search-app-39pc&#34;&gt;first part&lt;/a&gt; we learn the basics of &lt;code&gt;useState&lt;/code&gt;, built the first parts of the Recipe Search application. The full code can be found on &lt;a href=&#34;https://github.com/olajohn-ajiboye/Blog-React-Hook-Tutorial&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learn React Hooks and Context API by Building a Recipe Search App Part 1</title>
+      <link>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</link>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</guid>
+      <description>This is a beginner tutorial in understanding React Hooks and the Context API. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
+This will be in two parts with this first part focusing on the basics of hooks. The other part will hopefully focus more on more advanced use cases and the Context API. We&amp;rsquo;ll implement the search functionality and convert to using the Context API for managing states and avoiding props drilling</description>
+    </item>
+    
+    <item>
+      <title>The 20% Of ES6 you end up using 80% of the time - Let &amp; Const.</title>
       <link>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</link>
       <pubDate>Sun, 02 Jun 2019 23:27:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/most-of-the-es6-you-need-get-started-really-well-with-react/</guid>
-      <description></description>
+      <description>Variable declaration with let &amp;amp; const  This is the first part in the series. I will be covering the other sections in part 2.
+ One of the more confusing part of learning a Javascript framework is that everything looks like magic at first. Especially when your knowledge of modern Javascript is not up to date. You are unsure which part of the code is some abracadabra or just plain ES6 Javascript.</description>
     </item>
     
   </channel>

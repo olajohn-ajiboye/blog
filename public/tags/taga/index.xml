@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tagA on Ola John </title>
+    <link>http://olajohn.me/tags/taga/</link>
+    <description>Recent content in tagA on Ola John </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jun 2019 13:17:24 +0300</lastBuildDate>
+    
+	<atom:link href="http://olajohn.me/tags/taga/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Start Blog With Hugo</title>
+      <link>http://olajohn.me/post/start-blog-with-hugo/</link>
+      <pubDate>Mon, 03 Jun 2019 13:17:24 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/start-blog-with-hugo/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linking Table of Content Within a Markdown</title>
+      <link>http://olajohn.me/post/linking-table-of-content-within-a-markdown/</link>
+      <pubDate>Mon, 03 Jun 2019 13:16:43 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/linking-table-of-content-within-a-markdown/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

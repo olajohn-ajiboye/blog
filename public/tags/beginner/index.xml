@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beginner on Ola John </title>
+    <link>http://olajohn.me/tags/beginner/</link>
+    <description>Recent content in Beginner on Ola John </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Jul 2019 13:45:08 +0300</lastBuildDate>
+    
+	<atom:link href="http://olajohn.me/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learn React Hook and Context Api Part(2)</title>
+      <link>http://olajohn.me/post/react-hook-and-context-api-part2/</link>
+      <pubDate>Thu, 04 Jul 2019 13:45:08 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/react-hook-and-context-api-part2/</guid>
+      <description>&lt;p&gt;This is the second part of the series in learning &lt;strong&gt;React Hooks&lt;/strong&gt; and the &lt;strong&gt;Context API&lt;/strong&gt;. In the  &lt;a href=&#34;https://dev.to/mongopark/let-s-learn-react-hooks-and-context-api-by-building-a-recipe-search-app-39pc&#34;&gt;first part&lt;/a&gt; we learn the basics of &lt;code&gt;useState&lt;/code&gt;, built the first parts of the Recipe Search application. The full code can be found on &lt;a href=&#34;https://github.com/olajohn-ajiboye/Blog-React-Hook-Tutorial&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learn React Hooks and Context API by Building a Recipe Search App Part 1</title>
+      <link>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</link>
+      <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</guid>
+      <description>This is a beginner tutorial in understanding React Hooks and the Context API. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
+This will be in two parts with this first part focusing on the basics of hooks. The other part will hopefully focus more on more advanced use cases and the Context API. We&amp;rsquo;ll implement the search functionality and convert to using the Context API for managing states and avoiding props drilling</description>
+    </item>
+    
+    <item>
+      <title>Part 5 - ES6 Destructuring</title>
+      <link>http://olajohn.me/post/es6-destructuring/</link>
+      <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-destructuring/</guid>
+      <description>&lt;h3 id=&#34;destructuring-assignments&#34;&gt;Destructuring assignments 👌&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;destructuring assignment&lt;/strong&gt; syntax is a JavaScript expression that makes it possible to unpack values from &lt;code&gt;arrays&lt;/code&gt;, or &lt;em&gt;&lt;code&gt;properties&lt;/code&gt;&lt;/em&gt; from &lt;code&gt;objects&lt;/code&gt;, into &lt;strong&gt;distinct variables&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Part 4 - ES6 Module System</title>
+      <link>http://olajohn.me/post/es6-module-system/</link>
+      <pubDate>Thu, 06 Jun 2019 21:59:11 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-module-system/</guid>
+      <description>&lt;h3 id=&#34;es6-module-system&#34;&gt;ES6 Module system 😃&lt;/h3&gt;
+
+&lt;p&gt;ES6 modules are one of the more critically important concepts you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that &lt;a href=&#34;https://exploringjs.com/es6/ch_modules.html&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.sitepoint.com/understanding-es6-modules/&#34;&gt;here&lt;/a&gt;. Instead I will provide a quick overview of what they are and how to quickly get started with them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Part 2 - ES6 Ternary Operators</title>
+      <link>http://olajohn.me/post/es6-ternary-operators/</link>
+      <pubDate>Thu, 06 Jun 2019 21:58:34 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/es6-ternary-operators/</guid>
+      <description>&lt;h3 id=&#34;ternary-operators&#34;&gt;Ternary Operators 😍&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the &lt;strong&gt;if&lt;/strong&gt; statement.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
