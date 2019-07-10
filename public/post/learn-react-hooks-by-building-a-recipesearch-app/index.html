@@ -10,7 +10,7 @@
     
 
     
-    <title>Learn React Hooks by Building a Recipe Search App</title>
+    <title>Learn React Hooks and Context API by Building a Recipe Search App Part 1</title>
 
     
     
@@ -21,16 +21,16 @@
   
   <meta name="author" content="Ola JOHN" />
   <meta name="description" content="This is a beginner tutorial in understanding React Hooks and the Context API. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
-">
+This will be in two parts with this first part focusing on the basics of hooks. The other part will hopefully focus more on more advanced use cases and the Context API. We&amp;rsquo;ll implement the search functionality and convert to using the Context API for managing states and avoiding props drilling">
 
   
   
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jolajiboye" />
-    <meta name="twitter:title" content="Learn React Hooks by Building a Recipe Search App" />
+    <meta name="twitter:title" content="Learn React Hooks and Context API by Building a Recipe Search App Part 1" />
     <meta name="twitter:description" content="This is a beginner tutorial in understanding React Hooks and the Context API. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
-" />
-    <meta name="twitter:image" content="http://olajohn.me/img/hooks.jpg" />
+This will be in two parts with this first part focusing on the basics of hooks. The other part will hopefully focus more on more advanced use cases and the Context API. We&amp;rsquo;ll implement the search functionality and convert to using the Context API for managing states and avoiding props drilling" />
+    <meta name="twitter:image" content="http://olajohn.me/img/avatar.jpg" />
   
 
 
@@ -173,7 +173,7 @@
       
       
       
-        <li class="menu-item "><a href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
+        <li class="menu-item "><a href="https://dev.to/mongopark">Dev Profile</a></li>
       
     </ul>
   </nav>
@@ -245,7 +245,7 @@
     
     
     
-      <li class="sidebar-item "><a class="sidebar-link" href="https://www.gitshowcase.com/olajohn-ajiboye">Portfolio</a></li>
+      <li class="sidebar-item "><a class="sidebar-link" href="https://dev.to/mongopark">Dev Profile</a></li>
     
   </ul>
 </amp-sidebar>
@@ -253,12 +253,14 @@
     
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Learn React Hooks by Building a Recipe Search App</h1>
+      <h1 class="post-title">Learn React Hooks and Context API by Building a Recipe Search App Part 1</h1>
       <p class="entry-meta"><span class="entry-time">Jun 27, 2019</span> 12 min read</p>
     </header>
     
 
-    <article class="post-content"><p>This is a beginner tutorial in understanding <code>React Hooks</code>  and the <code>Context API</code>. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.</p>
+    <article class="post-content">
+
+<p>This is a beginner tutorial in understanding <code>React Hooks</code>  and the <code>Context API</code>. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.</p>
 
 <p>This will be in two parts with this first part focusing on the basics of <code>hooks</code>. The other part will hopefully focus more on more advanced use cases and the <code>Context API</code>. We&rsquo;ll implement the search functionality and convert to using the  <code>Context API</code> for managing states and avoiding <code>props drilling</code></p>
 
@@ -270,7 +272,8 @@
 
 <p>We&rsquo;ll build a simple clone of the food2fork website. This will not be a fully fledged version of it, but we&rsquo;ll use their API with the top 30 recipes. Add some UI logic of our own just to mess with the states and see how we handle them with <code>hooks</code>.</p>
 
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561757356255/kgOo1cmfl.gif" alt="Final.gif" /></p>
+<p><img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561757356255/kgOo1cmfl.gif" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
+</div></p>
 
 <h2 id="prerequisite">Prerequisite</h2>
 
@@ -287,7 +290,8 @@
 <p><strong>What is a Hook?</strong> A Hook is a special function that lets you <strong>“hook”</strong>  into React features. For example, useState is a Hook that lets you add React state to function components.</p>
 </blockquote>
 
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561758534907/eg-bho7_D.jpeg" alt="tell.jpg" /></p>
+<p><img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561758534907/eg-bho7_D.jpeg" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
+</div></p>
 
 <p>In simple English, hooks allow us to &ldquo;hook&rdquo; into specific React Features. For example <code>useState</code> as the name implies helps us to use state feature in React where we otherwise wouldn&rsquo;t be able to use it, i.e inside a function component. We&rsquo;ll explain a little bit in details the syntax usage etc through building the recipe search application.</p>
 
@@ -306,7 +310,8 @@ cd Blog-React-Hook-Tutorial</p>
 
 <p>If you did everything correctly, you should have a folder structure like below. You can also clone the <code>second</code> branch in the repo  [here]() to jump to this point in the tutorial.</p>
 
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561582276567/x5RzZLgNz.png" alt="Folder Structure.PNG" /></p>
+<p><img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561582276567/x5RzZLgNz.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
+</div></p>
 
 <p>If you have not already, one extension I will recommend installing is the <code>ES7 React/Redux/GraphQL/React-Native snippets</code>. It speeds up your React development by allowing you to type shorthands to get some React Snippet. You can find out more <a href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets">here</a></p>
 
@@ -314,7 +319,9 @@ cd Blog-React-Hook-Tutorial</p>
 
 <p>Why even Hooks?</p>
 
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561588938878/yhBMIOEyV.gif" alt="ezgif.com-optimize.gif" /></p>
+<p><img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561588938878/yhBMIOEyV.gif" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" ></p>
+
+<p></div></p>
 
 <p>One of the most common things you will do in any frontend application is fetching and displaying data, and manipulating UI based on UX. React is no different. One of the common use cases of <strong>state</strong> is to store data from an API call.  Before <code>hooks</code>, if you needed to have a <code>state</code> of any type within your app, you absolutely have to use a class component. You&rsquo;d also need to fetch data asynchronously within the <code>componentDidMount</code> lifecycle. For many, this isn&rsquo;t a mighty problem, but the React team believes it gives rise to the tight coupling of component logic. Also in more complex apps, it is hard to reuse stateful logic. Don&rsquo;t take my word for that, just read the motivation for hooks <a href="https://reactjs.org/docs/hooks-intro.html">here</a></p>
 
@@ -405,7 +412,7 @@ There are a couple of things that are obvious right away, we have imported useSt
 
 <p>At this point, your <code>App.js</code>  should look like below, we have simply passed down the recipes array inside our state as a <code>recipes props</code> to the <code>RecipeList</code> component. Note, I have also added a loading state with the <code>useState</code> and set it back to <code>false</code> after data is completely fetched. This the first example of using multiple states.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">useState</span>, <span style="color:#a6e22e">useEffect</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsm" data-lang="jsm"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">useState</span>, <span style="color:#a6e22e">useEffect</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
 <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">RecipeList</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/RecipeList&#39;</span>
 <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">RecipeDetails</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/RecipeDetails&#39;</span>
 
@@ -433,8 +440,7 @@ There are a couple of things that are obvious right away, we have imported useSt
 
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
 </code></pre></div>
-
-<p>Next, let&rsquo;s move to the <code>RecipeList</code> component and see what we have.</p>
+Next, let&rsquo;s move to the <code>RecipeList</code> component and see what we have.</p>
 
 <p>Here we have simply received the <code>recipes</code> passed as a <code>prop</code> from the parent <code>App</code> component and immediately <code>destructured</code> it &ndash;see line <strong>5</strong>. We then mapped over it, pass down each recipe to the <code>Recipe</code> component as <code>prop</code>. Nothing particularly interesting here.</p>
 
@@ -559,7 +565,8 @@ And that&rsquo;s about it, in the returned <code>jsx</code> we conditionally ren
 
 <p>Hope you enjoyed the introduction. Feedbacks are welcomes. Stay tuned for the next update and see you soon. Thank you!</p>
 
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561763819140/b8txZnUyU.jpeg" alt="thank-you-meme-03.jpg" /></p></article>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561763819140/b8txZnUyU.jpeg" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:300px; width:320px"  alt="thank-you-meme-03.jpg"></p>
+</article>
     <footer class="post-footer">
       
       <ul class="post-tags">
@@ -578,10 +585,10 @@ And that&rsquo;s about it, in the returned <code>jsx</code> we conditionally ren
         <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2folajohn.me%2fpost%2flearn-react-hooks-by-building-a-recipesearch-app%2f" title="Share on Facebook">
           <svg class="icon icon-facebook" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
         </a>
-        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Learn%20React%20Hooks%20by%20Building%20a%20Recipe%20Search%20App&amp;url=http%3a%2f%2folajohn.me%2fpost%2flearn-react-hooks-by-building-a-recipesearch-app%2f" title="Share on Twitter">
+        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Learn%20React%20Hooks%20and%20Context%20API%20by%20Building%20a%20Recipe%20Search%20App%20Part%201&amp;url=http%3a%2f%2folajohn.me%2fpost%2flearn-react-hooks-by-building-a-recipesearch-app%2f" title="Share on Twitter">
           <svg class="icon icon-twitter" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
         </a>
-        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Learn%20React%20Hooks%20by%20Building%20a%20Recipe%20Search%20App&amp;url=http%3a%2f%2folajohn.me%2fpost%2flearn-react-hooks-by-building-a-recipesearch-app%2f" title="Share on Google+">
+        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Learn%20React%20Hooks%20and%20Context%20API%20by%20Building%20a%20Recipe%20Search%20App%20Part%201&amp;url=http%3a%2f%2folajohn.me%2fpost%2flearn-react-hooks-by-building-a-recipesearch-app%2f" title="Share on Google+">
           <svg class="icon icon-google" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
         </a>
       </div>

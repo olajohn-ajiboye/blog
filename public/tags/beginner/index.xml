@@ -6,18 +6,28 @@
     <description>Recent content in Beginner on Ola John </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jun 2019 21:37:30 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 13:45:08 +0300</lastBuildDate>
     
 	<atom:link href="http://olajohn.me/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Learn React Hooks by Building a Recipe Search App</title>
+      <title>Learn React Hook and Context Api Part(2)</title>
+      <link>http://olajohn.me/post/react-hook-and-context-api-part2/</link>
+      <pubDate>Thu, 04 Jul 2019 13:45:08 +0300</pubDate>
+      
+      <guid>http://olajohn.me/post/react-hook-and-context-api-part2/</guid>
+      <description>&lt;p&gt;This is the second part of the series in learning &lt;strong&gt;React Hooks&lt;/strong&gt; and the &lt;strong&gt;Context API&lt;/strong&gt;. In the  &lt;a href=&#34;https://dev.to/mongopark/let-s-learn-react-hooks-and-context-api-by-building-a-recipe-search-app-39pc&#34;&gt;first part&lt;/a&gt; we learn the basics of &lt;code&gt;useState&lt;/code&gt;, built the first parts of the Recipe Search application. The full code can be found on &lt;a href=&#34;https://github.com/olajohn-ajiboye/Blog-React-Hook-Tutorial&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learn React Hooks and Context API by Building a Recipe Search App Part 1</title>
       <link>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</link>
       <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
       
       <guid>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</guid>
-      <description>&lt;p&gt;This is a beginner tutorial in understanding &lt;code&gt;React Hooks&lt;/code&gt;  and the &lt;code&gt;Context API&lt;/code&gt;. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.&lt;/p&gt;</description>
+      <description>This is a beginner tutorial in understanding React Hooks and the Context API. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
+This will be in two parts with this first part focusing on the basics of hooks. The other part will hopefully focus more on more advanced use cases and the Context API. We&amp;rsquo;ll implement the search functionality and convert to using the Context API for managing states and avoiding props drilling</description>
     </item>
     
     <item>

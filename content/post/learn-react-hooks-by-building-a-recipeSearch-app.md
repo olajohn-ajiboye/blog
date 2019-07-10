@@ -1,5 +1,5 @@
 ---
-title: "Learn React Hooks by Building a Recipe Search App"
+title: "Learn React Hooks and Context API by Building a Recipe Search App Part 1"
 author: "Ola JOHN"
 tags: ["React", "Hooks","ES6","Beginner"]
 date: 2019-06-27T21:37:30+03:00
@@ -10,7 +10,6 @@ draft: false
 This is a beginner tutorial in understanding `React Hooks`  and the `Context API`. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
 
 
-<!--more-->
 This will be in two parts with this first part focusing on the basics of `hooks`. The other part will hopefully focus more on more advanced use cases and the `Context API`. We'll implement the search functionality and convert to using the  `Context API` for managing states and avoiding `props drilling`
 
 ## How are we going to learn?
@@ -21,7 +20,9 @@ We'll look at some contrast on handling the same state logic with a class compon
 
 We'll build a simple clone of the food2fork website. This will not be a fully fledged version of it, but we'll use their API with the top 30 recipes. Add some UI logic of our own just to mess with the states and see how we handle them with `hooks`.
 
-![Final.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1561757356255/kgOo1cmfl.gif)
+<img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561757356255/kgOo1cmfl.gif" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
+
+
 
 ## Prerequisite
 - Basic Knowledge of React
@@ -35,8 +36,9 @@ First things first, so what is React Hook? From [documentation](https://reactjs.
 
 > **What is a Hook?** A Hook is a special function that lets you **“hook”**  into React features. For example, useState is a Hook that lets you add React state to function components.
 
+<img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561758534907/eg-bho7_D.jpeg" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
+</div>
 
-![tell.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1561758534907/eg-bho7_D.jpeg)
 
 In simple English, hooks allow us to "hook" into specific React Features. For example `useState` as the name implies helps us to use state feature in React where we otherwise wouldn't be able to use it, i.e inside a function component. We'll explain a little bit in details the syntax usage etc through building the recipe search application.
 
@@ -53,15 +55,19 @@ Let's create the component folder in our `src` folder to hold the different comp
 
 If you did everything correctly, you should have a folder structure like below. You can also clone the `second` branch in the repo  [here]() to jump to this point in the tutorial.
 
-![Folder Structure.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1561582276567/x5RzZLgNz.png)
+<img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561582276567/x5RzZLgNz.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
+</div>
+
 
 If you have not already, one extension I will recommend installing is the `ES7 React/Redux/GraphQL/React-Native snippets`. It speeds up your React development by allowing you to type shorthands to get some React Snippet. You can find out more [here](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
 ## So let's get `Hooked`
 Why even Hooks?
 
+<img src= "https://cdn.hashnode.com/res/hashnode/image/upload/v1561588938878/yhBMIOEyV.gif" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:320px; width:520px" >
 
-![ezgif.com-optimize.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1561588938878/yhBMIOEyV.gif)
+</div>
+
 
 
 One of the most common things you will do in any frontend application is fetching and displaying data, and manipulating UI based on UX. React is no different. One of the common use cases of **state** is to store data from an API call.  Before `hooks`, if you needed to have a `state` of any type within your app, you absolutely have to use a class component. You'd also need to fetch data asynchronously within the `componentDidMount` lifecycle. For many, this isn't a mighty problem, but the React team believes it gives rise to the tight coupling of component logic. Also in more complex apps, it is hard to reuse stateful logic. Don't take my word for that, just read the motivation for hooks [here](https://reactjs.org/docs/hooks-intro.html)
@@ -95,12 +101,9 @@ export default class test extends Component {
     )
   }
 }
-
-
-{{</ highlight>}}
+{{</ highlight >}}
 
 > Let's take a look at the same code with Hook and Effect followed by an explanation
-
 
 
 {{< highlight jsm  "linenostart=1"  >}}
@@ -131,17 +134,14 @@ function App() {
 
 export default App;
 
-
-{{< /highlight  >}}
+{{</ highlight   >}}
 There are a couple of things that are obvious right away, we have imported useState and useEffect from `react`. These are the APIs exposed to us that enables us to use `React Hooks`. The `useState` Hook accepts the initial state. In the example above we have initialized it into an empty array. We expect to populate the array with data from the API call. This is equivalent to below in our class component.
-
 
 {{< highlight jsm  "linenostart=1"  >}}
  this.state = {
       apiResponse: [],
     }
-
-{{< /highlight  >}}
+{{</ highlight >}}
 
 Furthermore, the `useState` returns a pair of values to us. They are the current state and a function that updates it. So we get back `[currentState, setStateFunction]` from the use state. That is why we have written  ` const [recipes, setRecipes] = useState([])` in our application. Where `recipes` is an array to hold our recipe data. `setRecipe` is the function that enables us to update the state, this is equivalent to `this.setState` in a class component.
 
@@ -150,8 +150,7 @@ In case the syntax looks confusing, these are not **React** specific syntax, but
 
 {{< highlight jsm  "linenostart=1"  >}}
 const [recipes, setRecipes] = useState([])
-
-{{< /highlight  >}}
+{{</ highlight >}}
 
  If you need some refresher or primer on destructuring, I have written a little bit about it [here](https://olajohn.me/post/es6-destructuring/).
 
@@ -199,7 +198,6 @@ function App() {
 export default App;
 
 {{</ highlight  >}}
-
 Next, let's move to the `RecipeList` component and see what we have.
 
 Here we have simply received the `recipes` passed as a `prop` from the parent `App` component and immediately `destructured` it --see line **5**. We then mapped over it, pass down each recipe to the `Recipe` component as `prop`. Nothing particularly interesting here.
@@ -232,12 +230,10 @@ export default function RecipeList({ recipes }) {
 }
 
 
-{{< /highlight   >}}
+{{</ highlight >}}
 
 ## Now to the fun part.
 Inside the `Recipe` component, I have added some contrived `states` that are simple enough to fully understand. We'll make an attempt to go line by line, trying to understand what we are doing and how we are handling stateful logic with the `useState hook` . You should have the below in your `Recipe` component.
-
-
 
 {{< highlight jsm  "linenostart=1"  >}}
 import React, { useState } from 'react'
@@ -283,10 +279,8 @@ export default function Recipe({ recipe }) {
     </>
   )
 }
-
-{{< /highlight  >}}
+{{</ highlight >}}
 Let's understand the code above. Like previously, we have received the `recipe` as a `prop` from it's parent component which is the `RecipeList` we have then destructured it immediately within the function argument. We then went ahead to further destructure the parts we intend to use from the `recipe` object. I know what the `recipe` object contains because I have tested the API, so this isn's some magic. This is equivalent to below
-
 
 {{< highlight jsm  "linenostart=1"  >}}
 export default function Recipe(props) {
@@ -295,7 +289,7 @@ export default function Recipe(props) {
 
 }
 
-{{</ highlight >}}
+{{</ highlight  >}}
 
 Now to some useful state. If you checked the application. You'd realize that when  we clicked on the **more** details button we get the extra information related to that recipe, specifically the `list of ingredient` and the `social rating`. Take a peek at the gif on top for a refresher. So we need some kind of state to handle the desired user interaction.
 
@@ -316,11 +310,11 @@ Since we intend to call  `handleShowInfo` on click of a button we have access to
 The `recipe` we get as response is the slotted inside the `setRecipeDetails` to serve as and updater for the `recipeDetails`. At this point, we have simply set the state of `recipeDetails` to the array response variable `recipe`. This is equivalent to
 
 
-{{< highlight jsm  "linenostart=1"  >}}
+{{< highlight jsm    >}}
 this.setState{
 recipedDetails: recipe
 }
-{{</ highlight >}}
+{{</ highlight  >}}
 Another thing is that we set the value of `showInfo` to the opposite of what it was. This is what creates the toggle effect whenever the button is clicked. This is equivalent to.
 
 {{< highlight jsm  "linenostart=1"  >}}
@@ -328,12 +322,11 @@ this.setState{
 showInfo: !showInfo
 }
 
-{{< /highlight >}}
+{{</ highlight  >}}
 And that's about it, in the returned `jsx` we conditionally rendered the info based on the state of `showInfo` when the button is clicked. We have additionally mapped over the array of ingredients to display them as the additional info.
 
 This is the end of this very basic introduction of `hooks` and perhaps an oversimplification. In the next iteration of this series, we shall examine hooks in more details and then learn the ` Context API`.
 
 Hope you enjoyed the introduction. Feedbacks are welcomes. Stay tuned for the next update and see you soon. Thank you!
 
-
-![thank-you-meme-03.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1561763819140/b8txZnUyU.jpeg)
+<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1561763819140/b8txZnUyU.jpeg" style="display: block;margin-left: auto;margin-right: auto;width: 50%; height:300px; width:320px"  alt="thank-you-meme-03.jpg">

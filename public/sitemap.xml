@@ -4,7 +4,48 @@
   
   <url>
     <loc>http://olajohn.me/tags/beginner/</loc>
-    <lastmod>2019-06-27T21:37:30+03:00</lastmod>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/javascript/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/react-hook-and-context-api-part2/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/post/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/react/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/react-hooks/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://olajohn.me/tags/</loc>
+    <lastmod>2019-07-04T13:45:08+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -26,37 +67,7 @@
   </url>
   
   <url>
-    <loc>http://olajohn.me/</loc>
-    <lastmod>2019-06-27T21:37:30+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/post/</loc>
-    <lastmod>2019-06-27T21:37:30+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/tags/react/</loc>
-    <lastmod>2019-06-27T21:37:30+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/tags/</loc>
-    <lastmod>2019-06-27T21:37:30+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://olajohn.me/tags/destructuring/</loc>
-    <lastmod>2019-06-06T21:59:33+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://olajohn.me/tags/javascript/</loc>
     <lastmod>2019-06-06T21:59:33+03:00</lastmod>
     <priority>0</priority>
   </url>

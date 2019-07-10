@@ -33,12 +33,12 @@ enableEmoji = "true"
   category = "categories"
 
 [[menu.main]]
-  name = "Portfolio"
+  name = "Dev Profile"
   weight = 1
   identifier = "hugo"
-  url = "https://www.gitshowcase.com/olajohn-ajiboye"
+  url = "https://dev.to/mongopark"
 # [[menu.main]]
-#   name = "Projects"
+#   name = "Dev.to"
 #   weight = 2
 #   identifier = "amp"
 #   url = "/amp/"

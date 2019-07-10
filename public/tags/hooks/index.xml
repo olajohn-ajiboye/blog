@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>Learn React Hooks by Building a Recipe Search App</title>
+      <title>Learn React Hooks and Context API by Building a Recipe Search App Part 1</title>
       <link>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</link>
       <pubDate>Thu, 27 Jun 2019 21:37:30 +0300</pubDate>
       
       <guid>http://olajohn.me/post/learn-react-hooks-by-building-a-recipesearch-app/</guid>
-      <description>&lt;p&gt;This is a beginner tutorial in understanding &lt;code&gt;React Hooks&lt;/code&gt;  and the &lt;code&gt;Context API&lt;/code&gt;. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.&lt;/p&gt;</description>
+      <description>This is a beginner tutorial in understanding React Hooks and the Context API. In reality, this is more of an attempt to explain these concepts to my self and to interested readers.
+This will be in two parts with this first part focusing on the basics of hooks. The other part will hopefully focus more on more advanced use cases and the Context API. We&amp;rsquo;ll implement the search functionality and convert to using the Context API for managing states and avoiding props drilling</description>
     </item>
     
   </channel>
