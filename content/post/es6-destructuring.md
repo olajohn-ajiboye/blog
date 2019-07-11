@@ -19,7 +19,7 @@ We'll look at this in two parts, **array** and **object** destructuring in progr
 
 * **Array destructuring :boom:**
 
-> Let's say you have an array of of my profile.
+> Let's say you have an array of profile information.
 {{< highlight jsm  "linenostart=1"  >}}
 // with ES5
 const profile = ["Ola", "John", "ElCapito", "SWE", "Nigeria"]
