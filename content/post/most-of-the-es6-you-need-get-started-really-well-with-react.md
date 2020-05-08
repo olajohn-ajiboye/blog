@@ -11,9 +11,7 @@ One of the more confusing part of learning a Javascript framework is that everyt
 You are unsure which part of the code is some **`abracadabra`** or just plain ES6 Javascript. At least this was my feeling when I started learning React,or even Angular(although that was Typescript).You get caught thinking what the hell is this *`bind(this)`* everywhere and why, what of those weird looking syntaxes and these funny variable assignments too...oh that was `destructuring`!.
 
 <br>
-<div style="margin:10px; padding:0 65px">
-{{< amp-img width="205px" height="70px" layout="responsive" src="/img/es6/inline/confused.gif" alt="confused" >}}
-</div>
+
 <br> <br> <br>
 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Destructuring on Ola John </title>
@@ -17,8 +17,7 @@
       <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
       
       <guid>http://olajohn.me/post/es6-destructuring/</guid>
-      <description>&lt;h3 id=&#34;destructuring-assignments&#34;&gt;Destructuring assignments 👌&lt;/h3&gt;
-
+      <description>&lt;h3 id=&#34;destructuring-assignments-&#34;&gt;Destructuring assignments 👌&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;strong&gt;destructuring assignment&lt;/strong&gt; syntax is a JavaScript expression that makes it possible to unpack values from &lt;code&gt;arrays&lt;/code&gt;, or &lt;em&gt;&lt;code&gt;properties&lt;/code&gt;&lt;/em&gt; from &lt;code&gt;objects&lt;/code&gt;, into &lt;strong&gt;distinct variables&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>

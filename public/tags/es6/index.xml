@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ES6 on Ola John </title>
@@ -27,8 +27,7 @@ This will be in two parts with this first part focusing on the basics of hooks. 
       <pubDate>Thu, 06 Jun 2019 21:59:33 +0300</pubDate>
       
       <guid>http://olajohn.me/post/es6-destructuring/</guid>
-      <description>&lt;h3 id=&#34;destructuring-assignments&#34;&gt;Destructuring assignments 👌&lt;/h3&gt;
-
+      <description>&lt;h3 id=&#34;destructuring-assignments-&#34;&gt;Destructuring assignments 👌&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;strong&gt;destructuring assignment&lt;/strong&gt; syntax is a JavaScript expression that makes it possible to unpack values from &lt;code&gt;arrays&lt;/code&gt;, or &lt;em&gt;&lt;code&gt;properties&lt;/code&gt;&lt;/em&gt; from &lt;code&gt;objects&lt;/code&gt;, into &lt;strong&gt;distinct variables&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -40,8 +39,7 @@ This will be in two parts with this first part focusing on the basics of hooks. 
       <pubDate>Thu, 06 Jun 2019 21:59:11 +0300</pubDate>
       
       <guid>http://olajohn.me/post/es6-module-system/</guid>
-      <description>&lt;h3 id=&#34;es6-module-system&#34;&gt;ES6 Module system 😃&lt;/h3&gt;
-
+      <description>&lt;h3 id=&#34;es6-module-system-&#34;&gt;ES6 Module system 😃&lt;/h3&gt;
 &lt;p&gt;ES6 modules are one of the more critically important concepts you will come across in every React program. I will not delve in-depth as to why the module patterns is important. You can read more about that &lt;a href=&#34;https://exploringjs.com/es6/ch_modules.html&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.sitepoint.com/understanding-es6-modules/&#34;&gt;here&lt;/a&gt;. Instead I will provide a quick overview of what they are and how to quickly get started with them.&lt;/p&gt;</description>
     </item>
     
@@ -51,8 +49,7 @@ This will be in two parts with this first part focusing on the basics of hooks. 
       <pubDate>Thu, 06 Jun 2019 21:58:53 +0300</pubDate>
       
       <guid>http://olajohn.me/post/es6-template-literals/</guid>
-      <description>&lt;h3 id=&#34;template-literals-template-strings&#34;&gt;Template literals (Template strings) 💪&lt;/h3&gt;
-
+      <description>&lt;h3 id=&#34;template-literals-template-strings-&#34;&gt;Template literals (Template strings) 💪&lt;/h3&gt;
 &lt;p&gt;String interpolation and multi-line strings are probably most of the template strings concepts you&amp;rsquo;ll encounter working with modern Javascript.Template strings are declared using backticks.&lt;/p&gt;</description>
     </item>
     
@@ -62,8 +59,7 @@ This will be in two parts with this first part focusing on the basics of hooks. 
       <pubDate>Thu, 06 Jun 2019 21:58:34 +0300</pubDate>
       
       <guid>http://olajohn.me/post/es6-ternary-operators/</guid>
-      <description>&lt;h3 id=&#34;ternary-operators&#34;&gt;Ternary Operators 😍&lt;/h3&gt;
-
+      <description>&lt;h3 id=&#34;ternary-operators-&#34;&gt;Ternary Operators 😍&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the &lt;strong&gt;if&lt;/strong&gt; statement.&lt;/p&gt;
 &lt;/blockquote&gt;</description>

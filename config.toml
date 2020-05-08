@@ -2,12 +2,12 @@ baseURL = "http://olajohn.me/"
 languageCode = "en-us"
 title = "Ola John "
 theme = "hugo-lamp"
-googleAnalytics = "UA-141257831-1"
+googleAnalytics = "UA-41823028-2"
 enableEmoji = "true"
 [params]
-  subtitle = "Javascript | Node | React | Vue"
+  subtitle = "Typescript | Javascript | Node | React | Vue"
   author = "Ola John Ajiboye"
-  logo = "/img/avatar.jpg"
+  logo = "/img/profile.png"
   description = "Writing Javascript stuffs"
   paginate = 10
 
@@ -32,11 +32,7 @@ enableEmoji = "true"
   tag = "tags"
   category = "categories"
 
-[[menu.main]]
-  name = "Dev Profile"
-  weight = 1
-  identifier = "hugo"
-  url = "https://dev.to/mongopark"
+
 # [[menu.main]]
 #   name = "Dev.to"
 #   weight = 2
